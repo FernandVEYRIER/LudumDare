@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(BoxCollider2D))]
 
@@ -50,7 +51,8 @@ public class Drag : MonoBehaviour {
 	void OnMouseDrag()
 	{
 		Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
-		Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
-		transform.position = curPosition;
+		Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);// + offset;
+		//transform.position = curPosition;
+		transform.position = Vector3.SmoothDamp(transform.position, curPosition, ref refVel, 0.1f);
 	}
 }

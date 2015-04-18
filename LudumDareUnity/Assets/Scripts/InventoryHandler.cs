@@ -31,10 +31,18 @@ public class InventoryHandler : MonoBehaviour {
 			objects[i].img = emptySlot;
 		}
 	}
-	
+
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.A))
+			removeObj(0);
+	}
+
 	public void addObject(obj _object)
 	{
-		objects[_object.index] = _object;
+		objects[_object.index].name = _object.name;
+		objects[_object.index].img = _object.img;
+		Debug.Log(objects[_object.index].name + " " + _object.index + " " + _object.name);
 		spritesObj[_object.index].sprite = _object.img;
 	}
 	
