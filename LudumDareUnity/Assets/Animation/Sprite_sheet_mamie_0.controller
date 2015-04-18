@@ -51,7 +51,7 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_Motion: {fileID: 20690950}
+  m_Motion: {fileID: 7400000, guid: 22d3111d7b9e0a2489de13e5ff4e3098, type: 2}
   m_Tag: 
 --- !u!1107 &110706462
 AnimatorStateMachine:
@@ -68,9 +68,6 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-    data:
-      first: {fileID: 0}
-      second: []
     data:
       first: {fileID: 0}
       second: []
