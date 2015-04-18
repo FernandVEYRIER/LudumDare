@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class InventoryHandler : MonoBehaviour {
 	[HideInInspector]
@@ -40,7 +41,7 @@ public class InventoryHandler : MonoBehaviour {
 		}
 		else
 		{
-			warningImage.color = new Color(1, 0, 0);
+			StartCoroutine(fadeWarning());
 		}
 	}
 
@@ -64,5 +65,20 @@ public class InventoryHandler : MonoBehaviour {
 			++pos;
 		}
 		return (pos);
+	}
+
+	IEnumerator fadeWarning()
+	{
+		for (float i = 1; i >= -0.1f; i -= 0.1f)
+		{
+			warningImage.color = new Color(1, 0, 0, i);
+			yield return new WaitForSeconds(0.06f);
+		}
+	}
+
+	public void draggingIn()
+	{
+		if (Drag.isDragged)
+			print("CACAAAAA");
 	}
 }
