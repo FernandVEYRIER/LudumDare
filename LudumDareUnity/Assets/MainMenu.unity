@@ -337,6 +337,7 @@ GameObject:
   - 92: {fileID: 1546239104}
   - 124: {fileID: 1546239103}
   - 81: {fileID: 1546239102}
+  - 114: {fileID: 1546239107}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -409,3 +410,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1546239107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1546239101}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ad5467732270489caa1d54fe84f1618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalResolution: 632
+  verticalResolution: 805
+  numColors: 8
+  color0: {r: 0, g: 0, b: 0, a: 1}
+  color1: {r: 1, g: 1, b: 1, a: 1}
+  color2: {r: 1, g: .294117659, b: .294117659, a: 1}
+  color3: {r: 1, g: .729411781, b: .0745098069, a: 1}
+  color4: {r: .917647064, g: .913725495, b: 0, a: 1}
+  color5: {r: .517647088, g: .811764717, b: .270588249, a: 1}
+  color6: {r: 0, g: .647058845, b: .792156875, a: 1}
+  color7: {r: .752941191, g: .41568628, b: .760784328, a: 1}
