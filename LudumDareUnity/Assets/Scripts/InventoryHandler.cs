@@ -41,7 +41,6 @@ public class InventoryHandler : MonoBehaviour {
 
 	public void addObject(obj _object)
 	{
-<<<<<<< HEAD
 		int emptySlot = areSlotsEmpty();
 		Debug.Log(emptySlot);
 		if (emptySlot != -1)
@@ -54,10 +53,6 @@ public class InventoryHandler : MonoBehaviour {
 		{
 			StartCoroutine(fadeWarning());
 		}
-=======
-		objects[_object.index] = _object;
-		spritesObj[_object.index].sprite = _object.img;
->>>>>>> origin/master
 	}
 
 	public void removeObj(int index)
