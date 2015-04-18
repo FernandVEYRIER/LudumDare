@@ -21,7 +21,7 @@ public class door : MonoBehaviour {
 			StartCoroutine(wait(col, -1));
 			col.GetComponent<ChangeRoom>().DontMove();
 		}
-		else if (col.tag == "Player" && col.transform.localScale.x == - 1)
+		else if (col.tag == "Player" && col.transform.localScale.x == -1)
 		{
 			Camera.main.GetComponent<FadeTransition>().StartCoroutine("Fade", roomToGo);
 			StartCoroutine(wait(col, 1));

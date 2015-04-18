@@ -23,15 +23,8 @@ public class FadeTransition : MonoBehaviour {
 
 	public IEnumerator Fade(string roomToGo)
 	{
-		var.enabled = true;
-		int step = 50;
-
-		for (int i = 10; i < 31; i++)
-		{
-			this.GetComponent<RetroPixel>().horizontalResolution -= step;
-			this.GetComponent<RetroPixel>().verticalResolution -= step;
-			yield return new WaitForSeconds(0.04f);
-		}
+		GameObject.Find("PixelEffector").GetComponent<PixelEffector>().startTransition();
+		yield return new WaitForSeconds(1.3f);
 		foreach (CameraPos _camPos in camPos)
 		{
 			if (_camPos.roomName == roomToGo)
@@ -39,12 +32,5 @@ public class FadeTransition : MonoBehaviour {
 				Camera.main.transform.position = _camPos.position.position + new Vector3(0, 0, -10);
 			}
 		}
-		for (int i = 31; i > 10; i--)
-		{
-			this.GetComponent<RetroPixel>().horizontalResolution += step;
-			this.GetComponent<RetroPixel>().verticalResolution += step;
-			yield return new WaitForSeconds(0.04f);
-		}
-		var.enabled = false;
 	}
 }

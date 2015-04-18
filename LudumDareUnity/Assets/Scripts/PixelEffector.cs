@@ -13,6 +13,10 @@ public class PixelEffector : MonoBehaviour {
 	{
 		pixelArray = new int [sizeY, sizeX];
 		clearTab();
+	}
+
+	public void startTransition()
+	{
 		pixelFX();
 	}
 
@@ -65,6 +69,7 @@ public class PixelEffector : MonoBehaviour {
 	{
 		int quadCount = 0;
 		emptyObj = new GameObject();
+		emptyObj.transform.parent = this.transform;
 		emptyObj.name = "PixelParent";
 		while (quadCount < sizeX * sizeY)
 		{
@@ -116,8 +121,7 @@ public class PixelEffector : MonoBehaviour {
 			}
 			++quadCount;
 		}
-        Invoke("pixelFXInverse", 0.6f + quadCount * 0.002f);
-        
+        Invoke("pixelFXInverse", 0.6f + quadCount * 0.002f);  
     }
 
 	IEnumerator delaySpawn(int i, int j, int delay)
@@ -126,7 +130,7 @@ public class PixelEffector : MonoBehaviour {
 		GameObject tmp;
 		tmp = GameObject.CreatePrimitive(PrimitiveType.Quad);
 		tmp.tag = "Finish";
-		tmp.transform.position = new Vector3(i + this.transform.position.x, j + this.transform.position.y);
+		tmp.transform.position = new Vector3(i + this.transform.position.x, j + this.transform.position.y, -2);
 		tmp.transform.parent = emptyObj.transform;
 	}
 
