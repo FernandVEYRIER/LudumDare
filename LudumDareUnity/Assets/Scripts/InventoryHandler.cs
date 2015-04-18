@@ -9,6 +9,7 @@ public class obj
 	public int index;
 	public string name;
 	public Sprite img;
+	public int theIndex;
 }
 
 public class InventoryHandler : MonoBehaviour {
@@ -19,53 +20,35 @@ public class InventoryHandler : MonoBehaviour {
 	[HideInInspector]
 	public bool canBeDropped = false;
 	public int index_drop = 0;
-
-//	[System.Serializable]
-//	public class obj
-//	{
-//		public int index;
-//		public string name;
-//		public Sprite img;
-//	}
-
+	
 	void Start()
 	{
 		int i;
 		for (i = 0; i < 3; i++)
 		{
-			//objects[i].index = i;
+			objects[i].index = i;
 			objects[i].name = "empty";
 			objects[i].img = emptySlot;
 		}
 	}
-
+	
 	public void addObject(obj _object)
 	{
-		int emptySlot = areSlotsEmpty();
-		Debug.Log(emptySlot);
-		if (emptySlot != -1)
-		{
-			//_object.index = emptySlot;
-			objects[emptySlot] = _object;
-			spritesObj[emptySlot].sprite = _object.img;
-		}
-		else
-		{
-			StartCoroutine(fadeWarning());
-		}
+		objects[_object.index] = _object;
+		spritesObj[_object.index].sprite = _object.img;
 	}
-
+	
 	public void removeObj(int index)
 	{
 		objects[index].name = "empty";
 		objects[index].img = emptySlot;
 		spritesObj[index].sprite = emptySlot;
 	}
-
+	
 	public int areSlotsEmpty()
 	{
 		int pos = 0;
-
+		
 		foreach (obj _object in objects)
 		{
 			if (_object.name == "empty")
@@ -76,12 +59,12 @@ public class InventoryHandler : MonoBehaviour {
 		}
 		return (-1);
 	}
-
+	
 	public void resetWarning()
 	{
 		warningImage.color = new Color(1, 0, 0, 0);
 	}
-
+	
 	public IEnumerator fadeWarning()
 	{
 		for (;;)
@@ -98,13 +81,13 @@ public class InventoryHandler : MonoBehaviour {
 			}
 		}
 	}
-
+	
 	public void draggingIn(int index)
 	{
 		canBeDropped = true;
 		index_drop = index;
 	}
-
+	
 	public void draggingOut()
 	{
 		canBeDropped = false;
