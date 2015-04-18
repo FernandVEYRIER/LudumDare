@@ -3,20 +3,27 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+[System.Serializable]
+public class obj
+{
+	public int index;
+	public string name;
+	public Sprite img;
+}
+
 public class InventoryHandler : MonoBehaviour {
-	[HideInInspector]
 	public obj [] objects = new obj[3];
 	public Image [] spritesObj;
 	public Sprite emptySlot;
 	public Image warningImage;
 
-	[System.Serializable]
-	public class obj
-	{
-		public int index;
-		public string name;
-		public Sprite img;
-	}
+//	[System.Serializable]
+//	public class obj
+//	{
+//		public int index;
+//		public string name;
+//		public Sprite img;
+//	}
 
 	void Start()
 	{
@@ -32,7 +39,7 @@ public class InventoryHandler : MonoBehaviour {
 	public void addObject(obj _object)
 	{
 		int emptySlot = areSlotsEmpty();
-
+		Debug.Log(emptySlot);
 		if (emptySlot != -1)
 		{
 			_object.index = emptySlot;
@@ -52,19 +59,19 @@ public class InventoryHandler : MonoBehaviour {
 		spritesObj[index].sprite = emptySlot;
 	}
 
-	int areSlotsEmpty()
+	public int areSlotsEmpty()
 	{
 		int pos = 0;
 
 		foreach (obj _object in objects)
 		{
-			if (_object.name != "empty")
+			if (_object.name == "empty")
 			{
-				return (-1);
+				return (pos);
 			}
 			++pos;
 		}
-		return (pos);
+		return (-1);
 	}
 
 	IEnumerator fadeWarning()

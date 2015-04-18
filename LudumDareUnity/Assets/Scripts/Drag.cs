@@ -8,8 +8,15 @@ public class Drag : MonoBehaviour {
 	public static bool isDragged = false;
 	private Vector3 screenPoint;
 	private Vector3 offset;
-	
-	void OnMouseDown() 
+	private Vector3 originalPos;
+	private Vector3 refVel;
+
+	void Start()
+	{
+		originalPos = this.transform.position;
+	}
+
+	void OnMouseDown()
 	{
 		isDragged = true;
 		offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
@@ -17,11 +24,19 @@ public class Drag : MonoBehaviour {
 
 	void OnMouseUp()
 	{
+		obj thisObj = new obj();
+		thisObj.name = "toto";
+		thisObj.img = null;
 		isDragged = false;
+		GameObject.Find("Inventory").GetComponent<InventoryHandler>().addObject(thisObj);
 	}
 
 	void Update()
 	{
+		if (isDragged == false)
+		{
+			this.transform.position = Vector3.SmoothDamp(this.transform.position, originalPos, ref refVel, 0.4f);
+		}
 		Vector3 worldCoorMin = Camera.main.ScreenToWorldPoint(new Vector3 (0, 0, 0));
 		Vector3 worldCoorMax = Camera.main.ScreenToWorldPoint(new Vector3 (Screen.width, Screen.height, 0));
 		this.transform.position = new Vector3(Mathf.Clamp(this.transform.position.x, worldCoorMin.x, worldCoorMax.x),
