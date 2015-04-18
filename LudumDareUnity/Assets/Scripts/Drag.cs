@@ -47,6 +47,7 @@ public class Drag : MonoBehaviour {
 		if (selfDragged == false)
 		{
 			this.transform.position = Vector3.SmoothDamp(this.transform.position, originalPos, ref refVel, 0.4f);
+			return;
 		}
 		Vector3 worldCoorMin = Camera.main.ScreenToWorldPoint(new Vector3 (0, 0, 0));
 		Vector3 worldCoorMax = Camera.main.ScreenToWorldPoint(new Vector3 (Screen.width, Screen.height, 0));
