@@ -439,6 +439,7 @@ MonoBehaviour:
   - {fileID: 944047589}
   emptySlot: {fileID: 21300000, guid: 5b3b0cf1ab81d4b4581ad9f9121e1dc7, type: 3}
   warningImage: {fileID: 808953216}
+  canBeDropped: 1
 --- !u!114 &812967990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,7 +460,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 1
   m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 0, y: 0}
+  m_Spacing: {x: 2, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!222 &812967991
@@ -486,6 +487,24 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 812967989}
           m_MethodName: draggingIn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+              Culture=neutral, PublicKeyToken=null
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 812967989}
+          m_MethodName: draggingOut
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

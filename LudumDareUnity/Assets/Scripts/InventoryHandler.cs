@@ -16,6 +16,7 @@ public class InventoryHandler : MonoBehaviour {
 	public Image [] spritesObj;
 	public Sprite emptySlot;
 	public Image warningImage;
+	public bool canBeDropped = true;
 
 	void Start()
 	{
@@ -89,7 +90,15 @@ public class InventoryHandler : MonoBehaviour {
 
 	public void draggingIn()
 	{
+		canBeDropped = true;
 		if (Drag.isDragged)
 			print("CACAAAAA");
+	}
+
+	public void draggingOut()
+	{
+		canBeDropped = false;
+		if (Drag.isDragged)
+			print("cucuuuuuu");
 	}
 }
