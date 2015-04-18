@@ -36,7 +36,10 @@ public class Drag : MonoBehaviour {
 		inventory.resetWarning();
 		thisObj.index = inventory.index_drop;
 		if (inventory.canBeDropped)
+		{
 			inventory.addObject(thisObj);
+			GameObject.Find("Spawn_info").GetComponent<bounce_info>().create_info_bulle(this.GetComponent<SpriteRenderer>().sprite);
+		}
 	}
 
 	void Update()
