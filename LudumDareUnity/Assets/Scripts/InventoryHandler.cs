@@ -16,7 +16,9 @@ public class InventoryHandler : MonoBehaviour {
 	public Image [] spritesObj;
 	public Sprite emptySlot;
 	public Image warningImage;
-	public bool canBeDropped = true;
+	[HideInInspector]
+	public bool canBeDropped = false;
+	public int index_drop = 0;
 
 	void Start()
 	{
@@ -31,17 +33,8 @@ public class InventoryHandler : MonoBehaviour {
 
 	public void addObject(obj _object)
 	{
-		int emptySlot = areSlotsEmpty();
-		if (emptySlot != -1)
-		{
-			_object.index = emptySlot;
-			objects[emptySlot] = _object;
-			spritesObj[emptySlot].sprite = _object.img;
-		}
-		else
-		{
-			StartCoroutine(fadeWarning());
-		}
+		objects[_object.index] = _object;
+		spritesObj[_object.index].sprite = _object.img;
 	}
 
 	public void removeObj(int index)
@@ -75,22 +68,23 @@ public class InventoryHandler : MonoBehaviour {
 	{
 		for (;;)
 		{
-		for (float i = 1; i >= -0.1f; i -= 0.1f)
-		{
-			warningImage.color = new Color(1, 0, 0, i);
-			yield return new WaitForSeconds(0.06f);
-		}
-		for (float i = 0; i <= 1.1f; i += 0.1f)
-		{
-			warningImage.color = new Color(1, 0, 0, i);
-			yield return new WaitForSeconds(0.06f);
-		}
+			for (float i = 1; i >= -0.1f; i -= 0.1f)
+			{
+				warningImage.color = new Color(1, 0, 0, i);
+				yield return new WaitForSeconds(0.06f);
+			}
+			for (float i = 0; i <= 1.1f; i += 0.1f)
+			{
+				warningImage.color = new Color(1, 0, 0, i);
+				yield return new WaitForSeconds(0.06f);
+			}
 		}
 	}
 
-	public void draggingIn()
+	public void draggingIn(int index)
 	{
 		canBeDropped = true;
+		index_drop = index;
 		if (Drag.isDragged)
 			print("CACAAAAA");
 	}

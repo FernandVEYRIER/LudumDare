@@ -30,6 +30,7 @@ public class Drag : MonoBehaviour {
 		isDragged = false;
 		inventory.StopAllCoroutines();
 		inventory.resetWarning();
+		thisObj.index = inventory.index_drop;
 		if (inventory.canBeDropped)
 			inventory.addObject(thisObj);
 	}
