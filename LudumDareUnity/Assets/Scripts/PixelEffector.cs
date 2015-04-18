@@ -27,7 +27,8 @@ public class PixelEffector : MonoBehaviour {
 		while (quadCount < sizeX * sizeY)
 		{
 			int randPos = Random.Range(0, sizeX * sizeY);
-
+			if (randPos > allObj.Length - 1)
+				randPos = 0;
 			if (allObj[randPos] != null)
 			{
 				Destroy(allObj[randPos], quadCount * 0.002f);
@@ -63,6 +64,8 @@ public class PixelEffector : MonoBehaviour {
 			}
 			++quadCount;
 		}
+		clearTab();
+
 	}
 
 	void pixelFX()
@@ -121,7 +124,7 @@ public class PixelEffector : MonoBehaviour {
 			}
 			++quadCount;
 		}
-        Invoke("pixelFXInverse", 0.6f + quadCount * 0.002f);  
+        Invoke("pixelFXInverse", 0.9f + quadCount * 0.002f);  
     }
 
 	IEnumerator delaySpawn(int i, int j, int delay)
