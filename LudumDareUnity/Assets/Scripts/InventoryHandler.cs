@@ -17,14 +17,6 @@ public class InventoryHandler : MonoBehaviour {
 	public Sprite emptySlot;
 	public Image warningImage;
 
-//	[System.Serializable]
-//	public class obj
-//	{
-//		public int index;
-//		public string name;
-//		public Sprite img;
-//	}
-
 	void Start()
 	{
 		int i;
@@ -39,7 +31,6 @@ public class InventoryHandler : MonoBehaviour {
 	public void addObject(obj _object)
 	{
 		int emptySlot = areSlotsEmpty();
-		Debug.Log(emptySlot);
 		if (emptySlot != -1)
 		{
 			_object.index = emptySlot;

@@ -5,6 +5,7 @@ using System.Collections;
 
 public class Drag : MonoBehaviour {
 
+	public obj thisObj;
 	public static bool isDragged = false;
 	private Vector3 screenPoint;
 	private Vector3 offset;
@@ -24,9 +25,6 @@ public class Drag : MonoBehaviour {
 
 	void OnMouseUp()
 	{
-		obj thisObj = new obj();
-		thisObj.name = "toto";
-		thisObj.img = null;
 		isDragged = false;
 		GameObject.Find("Inventory").GetComponent<InventoryHandler>().addObject(thisObj);
 	}
