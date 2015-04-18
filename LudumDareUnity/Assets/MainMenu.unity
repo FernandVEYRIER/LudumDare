@@ -220,6 +220,22 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11494478, guid: 7023e186da0c61446a5c0e8227a161bd, type: 2}
+      propertyPath: delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1499103150}
+    - target: {fileID: 11494478, guid: 7023e186da0c61446a5c0e8227a161bd, type: 2}
+      propertyPath: delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1471103105}
+    - target: {fileID: 11494478, guid: 7023e186da0c61446a5c0e8227a161bd, type: 2}
+      propertyPath: delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1499103150}
+    - target: {fileID: 11494478, guid: 7023e186da0c61446a5c0e8227a161bd, type: 2}
+      propertyPath: delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1471103105}
     - target: {fileID: 11407680, guid: 7023e186da0c61446a5c0e8227a161bd, type: 2}
       propertyPath: delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -249,22 +265,6 @@ Prefab:
       value: 
       objectReference: {fileID: 1499103150}
     - target: {fileID: 11403748, guid: 7023e186da0c61446a5c0e8227a161bd, type: 2}
-      propertyPath: delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1471103105}
-    - target: {fileID: 11494478, guid: 7023e186da0c61446a5c0e8227a161bd, type: 2}
-      propertyPath: delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1499103150}
-    - target: {fileID: 11494478, guid: 7023e186da0c61446a5c0e8227a161bd, type: 2}
-      propertyPath: delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1471103105}
-    - target: {fileID: 11494478, guid: 7023e186da0c61446a5c0e8227a161bd, type: 2}
-      propertyPath: delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1499103150}
-    - target: {fileID: 11494478, guid: 7023e186da0c61446a5c0e8227a161bd, type: 2}
       propertyPath: delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1471103105}
