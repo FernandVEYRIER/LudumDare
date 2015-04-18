@@ -6,8 +6,8 @@ public class ChangeRoom : MonoBehaviour {
 	public Transform leftDoor;
 	public Transform rightDoor;
 
-	bool moveRight = false;
-	bool moveLeft = true;
+	bool moveRight = true;
+	bool moveLeft = false;
 
 	Vector3 refVel;
 
@@ -39,7 +39,7 @@ public class ChangeRoom : MonoBehaviour {
 	public void MoveRight()
 	{
 		moveRight = true;
-		moveRight = false;
+		moveLeft = false;
 	}
 
 	public void DontMove()
