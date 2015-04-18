@@ -15,7 +15,52 @@ public class PixelEffector : MonoBehaviour {
 		clearTab();
 		pixelFX();
 	}
-	
+
+	void pixelFXInverse()
+	{
+		int quadCount = 0;
+		GameObject [] allObj = GameObject.FindGameObjectsWithTag("Finish"); 
+		while (quadCount < sizeX * sizeY)
+		{
+			int randPos = Random.Range(0, sizeX * sizeY);
+
+			if (allObj[randPos] != null)
+			{
+				Destroy(allObj[randPos], quadCount * 0.002f);
+				allObj[randPos] = null;
+			}
+			else
+			{
+				while (randPos < sizeX * sizeY)
+				{
+					if (allObj[randPos] != null)
+					{
+						Destroy(allObj[randPos], quadCount * 0.002f);
+						allObj[randPos] = null;
+                        break;
+					}
+					++randPos;
+				}
+				if (randPos >= sizeX * sizeY)
+				{
+					randPos = 0;
+					while (randPos < sizeX * sizeY)
+					{
+						if (allObj[randPos] != null)
+						{
+							Destroy(allObj[randPos], quadCount * 0.002f);
+							allObj[randPos] = null;
+                            
+                            break;
+						}
+						++randPos;
+					}
+				}
+			}
+			++quadCount;
+		}
+	}
+
 	void pixelFX()
 	{
 		int quadCount = 0;
@@ -71,13 +116,16 @@ public class PixelEffector : MonoBehaviour {
 			}
 			++quadCount;
 		}
-	}
+        Invoke("pixelFXInverse", 0.6f + quadCount * 0.002f);
+        
+    }
 
 	IEnumerator delaySpawn(int i, int j, int delay)
 	{
 		yield return new WaitForSeconds(0.5f + delay * 0.002f);
 		GameObject tmp;
 		tmp = GameObject.CreatePrimitive(PrimitiveType.Quad);
+		tmp.tag = "Finish";
 		tmp.transform.position = new Vector3(i + this.transform.position.x, j + this.transform.position.y);
 		tmp.transform.parent = emptyObj.transform;
 	}
