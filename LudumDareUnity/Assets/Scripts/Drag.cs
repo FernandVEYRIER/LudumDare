@@ -55,4 +55,23 @@ public class Drag : MonoBehaviour {
 		//transform.position = curPosition;
 		transform.position = Vector3.SmoothDamp(transform.position, curPosition, ref refVel, 0.1f);
 	}
+
+	public void SendImage()
+	{
+		InventoryHandler inventory = GameObject.Find("Inventory").GetComponent<InventoryHandler>();
+		if (!isDragged)
+			return;
+		this.GetComponent<SpriteRenderer>().enabled = false;
+		thisObj.index = inventory.index_drop;
+		inventory.addObject(thisObj);
+	}
+
+	public void DeleteImage()
+	{
+		InventoryHandler inventory = GameObject.Find("Inventory").GetComponent<InventoryHandler>();
+		if (!isDragged)
+			return;
+		this.GetComponent<SpriteRenderer>().enabled = true;
+		inventory.restoreObj(thisObj.index);
+	}
 }

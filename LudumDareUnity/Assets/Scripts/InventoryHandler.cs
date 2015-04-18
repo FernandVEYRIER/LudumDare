@@ -20,6 +20,7 @@ public class InventoryHandler : MonoBehaviour {
 	[HideInInspector]
 	public bool canBeDropped = false;
 	public int index_drop = 0;
+	obj oldObj = new obj();
 	
 	void Start()
 	{
@@ -40,9 +41,10 @@ public class InventoryHandler : MonoBehaviour {
 
 	public void addObject(obj _object)
 	{
+		oldObj.name = objects[_object.index].name;
+		oldObj.img = objects[_object.index].img;
 		objects[_object.index].name = _object.name;
 		objects[_object.index].img = _object.img;
-		Debug.Log(objects[_object.index].name + " " + _object.index + " " + _object.name);
 		spritesObj[_object.index].sprite = _object.img;
 	}
 	
@@ -52,7 +54,14 @@ public class InventoryHandler : MonoBehaviour {
 		objects[index].img = emptySlot;
 		spritesObj[index].sprite = emptySlot;
 	}
-	
+
+	public void restoreObj(int index)
+	{
+		objects[index].name = oldObj.name;
+		objects[index].img = oldObj.img;
+		spritesObj[index].sprite = objects[index].img;
+	}
+
 	public int areSlotsEmpty()
 	{
 		int pos = 0;
