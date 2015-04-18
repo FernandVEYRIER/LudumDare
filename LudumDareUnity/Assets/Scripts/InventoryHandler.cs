@@ -85,14 +85,10 @@ public class InventoryHandler : MonoBehaviour {
 	{
 		canBeDropped = true;
 		index_drop = index;
-		if (Drag.isDragged)
-			print("CACAAAAA");
 	}
 
 	public void draggingOut()
 	{
 		canBeDropped = false;
-		if (Drag.isDragged)
-			print("cucuuuuuu");
 	}
 }
