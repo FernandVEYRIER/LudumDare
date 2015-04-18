@@ -13,14 +13,12 @@ public class PixelEffector : MonoBehaviour {
 	{
 		pixelArray = new int [sizeY, sizeX];
 		clearTab();
-		StartCoroutine(pixelFX());
-		//pixelFX();
+		pixelFX();
 	}
 	
-	IEnumerator pixelFX()
+	void pixelFX()
 	{
 		int quadCount = 0;
-		GameObject tmp;
 		emptyObj = new GameObject();
 		emptyObj.name = "PixelParent";
 		while (quadCount < sizeX * sizeY)
@@ -30,10 +28,8 @@ public class PixelEffector : MonoBehaviour {
 
 			if (pixelArray[randY, randX] == 0)
 			{
-				tmp = GameObject.CreatePrimitive(PrimitiveType.Quad);
-				tmp.transform.position = new Vector3(randX + this.transform.position.x, randY + this.transform.position.y);
+				StartCoroutine(delaySpawn(randX, randY, quadCount));
 				pixelArray[randY, randX] = 1;
-				tmp.transform.parent = emptyObj.transform;
 			}
 			else
 			{
@@ -45,10 +41,8 @@ public class PixelEffector : MonoBehaviour {
 					{
 						if (pixelArray[j, i] == 0)
 						{
-							tmp = GameObject.CreatePrimitive(PrimitiveType.Quad);
-							tmp.transform.position = new Vector3(i + this.transform.position.x, j + this.transform.position.y);
+							StartCoroutine(delaySpawn(i, j, quadCount));
 							pixelArray[j, i] = 1;
-							tmp.transform.parent = emptyObj.transform;
 							mustBreak = true;
 							break;
 						}
@@ -64,10 +58,8 @@ public class PixelEffector : MonoBehaviour {
 						{
 							if (pixelArray[j, i] == 0)
 							{
-								tmp = GameObject.CreatePrimitive(PrimitiveType.Quad);
-								tmp.transform.position = new Vector3(i + this.transform.position.x, j + this.transform.position.y);
+								StartCoroutine(delaySpawn(i, j, quadCount));
 								pixelArray[j, i] = 1;
-								tmp.transform.parent = emptyObj.transform;
 								mustBreak = true;
 								break;
 							}
@@ -78,8 +70,16 @@ public class PixelEffector : MonoBehaviour {
 				}
 			}
 			++quadCount;
-			yield return new WaitForSeconds(0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001f);
 		}
+	}
+
+	IEnumerator delaySpawn(int i, int j, int delay)
+	{
+		yield return new WaitForSeconds(0.5f + delay * 0.002f);
+		GameObject tmp;
+		tmp = GameObject.CreatePrimitive(PrimitiveType.Quad);
+		tmp.transform.position = new Vector3(i + this.transform.position.x, j + this.transform.position.y);
+		tmp.transform.parent = emptyObj.transform;
 	}
 
 	void clearTab()
