@@ -15,13 +15,13 @@ public class door : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.transform.localScale.x == 1)
+		if (col.tag == "Player" && col.transform.localScale.x == 1)
 		{
 			Camera.main.GetComponent<FadeTransition>().StartCoroutine("Fade", roomToGo);
 			StartCoroutine(wait(col, -1));
 			col.GetComponent<ChangeRoom>().DontMove();
 		}
-		else if (col.transform.localScale.x == - 1)
+		else if (col.tag == "Player" && col.transform.localScale.x == - 1)
 		{
 			Camera.main.GetComponent<FadeTransition>().StartCoroutine("Fade", roomToGo);
 			StartCoroutine(wait(col, 1));
