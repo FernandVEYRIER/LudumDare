@@ -274,6 +274,7 @@ MonoBehaviour:
     index: 0
     name: toro
     img: {fileID: 21300000, guid: 985d6dcd55dec2940b81d75214306590, type: 3}
+    theIndex: 0
 --- !u!61 &1499103151
 BoxCollider2D:
   m_ObjectHideFlags: 0
