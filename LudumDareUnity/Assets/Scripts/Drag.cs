@@ -6,21 +6,23 @@ using UnityEngine.UI;
 
 public class Drag : MonoBehaviour {
 
-	public obj thisObj;
-	public static bool isDragged = false;
+	public obj thisObj = new obj();
 	private Vector3 screenPoint;
 	private Vector3 offset;
 	private Vector3 originalPos;
 	private Vector3 refVel;
+	bool selfDragged = false;
 
 	void Start()
 	{
+		InventoryHandler.isDragged = false;
 		originalPos = this.transform.position;
 	}
 
 	void OnMouseDown()
 	{
-		isDragged = true;
+		InventoryHandler.isDragged = true;
+		selfDragged = true;
 		GameObject.Find("Inventory").GetComponent<InventoryHandler>().StartCoroutine("fadeWarning");
 		offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
 	}
@@ -28,7 +30,8 @@ public class Drag : MonoBehaviour {
 	void OnMouseUp()
 	{
 		InventoryHandler inventory = GameObject.Find("Inventory").GetComponent<InventoryHandler>();
-		isDragged = false;
+		InventoryHandler.isDragged = false;
+		selfDragged = false;
 		inventory.StopAllCoroutines();
 		inventory.resetWarning();
 		thisObj.index = inventory.index_drop;
@@ -38,7 +41,7 @@ public class Drag : MonoBehaviour {
 
 	void Update()
 	{
-		if (isDragged == false)
+		if (selfDragged == false)
 		{
 			this.transform.position = Vector3.SmoothDamp(this.transform.position, originalPos, ref refVel, 0.4f);
 		}
@@ -59,7 +62,7 @@ public class Drag : MonoBehaviour {
 	public void SendImage()
 	{
 		InventoryHandler inventory = GameObject.Find("Inventory").GetComponent<InventoryHandler>();
-		if (!isDragged)
+		if (!selfDragged)
 			return;
 		this.GetComponent<SpriteRenderer>().enabled = false;
 		thisObj.index = inventory.index_drop;
@@ -69,7 +72,7 @@ public class Drag : MonoBehaviour {
 	public void DeleteImage()
 	{
 		InventoryHandler inventory = GameObject.Find("Inventory").GetComponent<InventoryHandler>();
-		if (!isDragged)
+		if (!selfDragged)
 			return;
 		this.GetComponent<SpriteRenderer>().enabled = true;
 		inventory.restoreObj(thisObj.index);

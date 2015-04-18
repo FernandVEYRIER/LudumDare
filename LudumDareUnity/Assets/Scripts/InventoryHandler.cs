@@ -21,6 +21,7 @@ public class InventoryHandler : MonoBehaviour {
 	public bool canBeDropped = false;
 	public int index_drop = 0;
 	obj oldObj = new obj();
+	public static bool isDragged = false;
 	
 	void Start()
 	{
@@ -59,7 +60,7 @@ public class InventoryHandler : MonoBehaviour {
 	{
 		objects[index].name = oldObj.name;
 		objects[index].img = oldObj.img;
-		spritesObj[index].sprite = objects[index].img;
+		spritesObj[index].sprite = oldObj.img;
 	}
 
 	public int areSlotsEmpty()
@@ -88,12 +89,12 @@ public class InventoryHandler : MonoBehaviour {
 		{
 			for (float i = 1; i >= -0.1f; i -= 0.1f)
 			{
-				warningImage.color = new Color(1, 0, 0, i);
+				warningImage.color = new Color(0, 1, 1, i);
 				yield return new WaitForSeconds(0.06f);
 			}
 			for (float i = 0; i <= 1.1f; i += 0.1f)
 			{
-				warningImage.color = new Color(1, 0, 0, i);
+				warningImage.color = new Color(0, 1, 1, i);
 				yield return new WaitForSeconds(0.06f);
 			}
 		}
