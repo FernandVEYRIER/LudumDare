@@ -20,13 +20,17 @@ public class Drag : MonoBehaviour {
 	void OnMouseDown()
 	{
 		isDragged = true;
+		GameObject.Find("Inventory").GetComponent<InventoryHandler>().StartCoroutine("fadeWarning");
 		offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
 	}
 
 	void OnMouseUp()
 	{
+		InventoryHandler inventory = GameObject.Find("Inventory").GetComponent<InventoryHandler>();
 		isDragged = false;
-		GameObject.Find("Inventory").GetComponent<InventoryHandler>().addObject(thisObj);
+		inventory.StopAllCoroutines();
+		inventory.resetWarning();
+		inventory.addObject(thisObj);
 	}
 
 	void Update()

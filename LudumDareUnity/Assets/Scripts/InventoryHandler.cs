@@ -65,12 +65,25 @@ public class InventoryHandler : MonoBehaviour {
 		return (-1);
 	}
 
-	IEnumerator fadeWarning()
+	public void resetWarning()
 	{
+		warningImage.color = new Color(1, 0, 0, 0);
+	}
+
+	public IEnumerator fadeWarning()
+	{
+		for (;;)
+		{
 		for (float i = 1; i >= -0.1f; i -= 0.1f)
 		{
 			warningImage.color = new Color(1, 0, 0, i);
 			yield return new WaitForSeconds(0.06f);
+		}
+		for (float i = 0; i <= 1.1f; i += 0.1f)
+		{
+			warningImage.color = new Color(1, 0, 0, i);
+			yield return new WaitForSeconds(0.06f);
+		}
 		}
 	}
 
