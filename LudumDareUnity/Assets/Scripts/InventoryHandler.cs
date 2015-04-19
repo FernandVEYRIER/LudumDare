@@ -44,8 +44,10 @@ public class InventoryHandler : MonoBehaviour {
 	{
 		oldObj.name = objects[_object.index].name;
 		oldObj.img = objects[_object.index].img;
+		oldObj.theIndex = objects[_object.index].theIndex;
 		objects[_object.index].name = _object.name;
 		objects[_object.index].img = _object.img;
+		objects[_object.index].theIndex = _object.theIndex;
 		spritesObj[_object.index].sprite = _object.img;
 	}
 	
