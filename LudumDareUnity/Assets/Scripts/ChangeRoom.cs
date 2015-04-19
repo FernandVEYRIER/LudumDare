@@ -3,9 +3,6 @@ using System.Collections;
 
 public class ChangeRoom : MonoBehaviour {
 
-	public Transform leftDoor;
-	public Transform rightDoor;
-	
 	bool moveRight = false;
 	bool moveLeft = false;
 	private Vector3 init;
@@ -20,13 +17,15 @@ public class ChangeRoom : MonoBehaviour {
 	{
 		if (moveLeft && !moveRight)
 		{
+			this.GetComponent<Animator>().SetBool("move", true);
 			this.transform.localScale = new Vector3(1, 1, 1);
-			this.transform.position = Vector3.Lerp(this.transform.position, new Vector3 (leftDoor.position.x, init.y, init.z), 2 * Time.deltaTime);
+			transform.Translate(-4 * Time.deltaTime, 0, 0);
 		}
 		if (!moveLeft && moveRight)
 		{
+			this.GetComponent<Animator>().SetBool("move", true);
 			this.transform.localScale = new Vector3(-1, 1, 1);
-			this.transform.position = Vector3.Lerp(this.transform.position, new Vector3 (rightDoor.position.x, init.y, init.z), 2 * Time.deltaTime);
+			transform.Translate(4 * Time.deltaTime, 0, 0);
 		}
 	}
 
@@ -46,5 +45,6 @@ public class ChangeRoom : MonoBehaviour {
 	{
 		moveRight = false;
 		moveLeft = false;
+		this.GetComponent<Animator>().SetBool("move", false);
 	}
 }
