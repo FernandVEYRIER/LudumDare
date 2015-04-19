@@ -24,7 +24,8 @@ public class FadeTransition : MonoBehaviour {
 	public IEnumerator Fade(string roomToGo)
 	{
 		GameObject.Find("PixelEffector").GetComponent<PixelEffector>().startTransition();
-		yield return new WaitForSeconds(1.3f);
+		GameObject.Find("Inventory").GetComponent<InventoryHandler>().hideInventory();
+        yield return new WaitForSeconds(1.3f);
 		foreach (CameraPos _camPos in camPos)
 		{
 			if (_camPos.roomName == roomToGo)
@@ -32,5 +33,5 @@ public class FadeTransition : MonoBehaviour {
 				Camera.main.transform.position = _camPos.position.position + new Vector3(0, 0, -10);
 			}
 		}
-	}
+    }
 }

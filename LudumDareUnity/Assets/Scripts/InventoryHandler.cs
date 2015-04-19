@@ -35,12 +35,6 @@ public class InventoryHandler : MonoBehaviour {
 		}
 	}
 
-	void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.A))
-			removeObj(0);
-	}
-
 	public void addObject(obj _object)
 	{
 		oldObj.name = objects[_object.index].name;
@@ -113,5 +107,16 @@ public class InventoryHandler : MonoBehaviour {
 	public void draggingOut()
 	{
 		canBeDropped = false;
+	}
+
+	public void hideInventory()
+	{
+		GameObject.Find("Canvas").GetComponent<Canvas>().enabled = false;
+		Invoke("showInventory", 2.6f);
+	}
+
+	public void showInventory()
+	{
+		GameObject.Find("Canvas").GetComponent<Canvas>().enabled = true;
 	}
 }

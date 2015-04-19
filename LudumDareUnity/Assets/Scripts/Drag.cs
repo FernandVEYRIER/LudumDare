@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Collider2D))]
 
 public class Drag : MonoBehaviour {
 
@@ -38,7 +38,7 @@ public class Drag : MonoBehaviour {
 		if (inventory.canBeDropped)
 		{
 			inventory.addObject(thisObj);
-			this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+			this.gameObject.GetComponent<Collider2D>().enabled = false;
 			GameObject.Find("Spawn_info").GetComponent<bounce_info>().create_info_bulle(this.GetComponent<SpriteRenderer>().sprite);
 		}
 	}
