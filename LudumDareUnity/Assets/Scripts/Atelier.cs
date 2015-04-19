@@ -14,13 +14,16 @@ public class Atelier : MonoBehaviour {
 	private bool fl = false;
 	private InventoryHandler inv;
 	private bool gocraft = false;
+	[HideInInspector]
+	public bool click = false;
 	void Start()
 	{
 		inv = GameObject.Find ("Inventory").GetComponent<InventoryHandler> ();
 	}
 	void Update()
 	{
-		if (!gocraft && Math.Abs (transform.position.x - GameObject.FindGameObjectWithTag ("Player").transform.position.x) <= 0.1f && GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom>().moveRight)
+		print (Math.Abs (transform.position.x - GameObject.FindGameObjectWithTag ("Player").transform.position.x));
+		if (click && !gocraft && Math.Abs (transform.position.x - GameObject.FindGameObjectWithTag ("Player").transform.position.x) <= 0.1f && (GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom>().moveRight || GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom>().moveLeft))
 		{
 			GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom>().DontMove();
 			StartCoroutine (wait ());
@@ -42,6 +45,7 @@ public class Atelier : MonoBehaviour {
 	}
 	void OnMouseDown()
 	{
+		click = true;
 		if (!GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom> ().transition && Math.Abs(transform.position.x - GameObject.FindGameObjectWithTag ("Player").transform.position.x) > 0.1f)
 		{
 			if (GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform> ().position.x < transform.position.x)
