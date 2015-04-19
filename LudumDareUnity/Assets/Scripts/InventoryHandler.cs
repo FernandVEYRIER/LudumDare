@@ -31,6 +31,7 @@ public class InventoryHandler : MonoBehaviour {
 			objects[i].index = i;
 			objects[i].name = "empty";
 			objects[i].img = emptySlot;
+			objects[i].theIndex = 0;
 		}
 	}
 
@@ -62,6 +63,7 @@ public class InventoryHandler : MonoBehaviour {
 	{
 		objects[index].name = oldObj.name;
 		objects[index].img = oldObj.img;
+		objects[index].theIndex = oldObj.theIndex;
 		spritesObj[index].sprite = oldObj.img;
 	}
 
