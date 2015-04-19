@@ -81,7 +81,7 @@ public class Atelier : MonoBehaviour {
 	{
 		gocraft = true;
 		GameObject.FindGameObjectWithTag ("Player").GetComponent<Animator> ().SetBool ("action", true);
-		yield return new WaitForSeconds(1.5f);
+		yield return new WaitForSeconds(2f);
 		GameObject.FindGameObjectWithTag ("Player").GetComponent<Animator> ().SetBool ("action", false);
 		gocraft = false;
 	}

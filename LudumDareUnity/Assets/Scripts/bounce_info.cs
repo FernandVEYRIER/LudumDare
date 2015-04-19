@@ -29,7 +29,7 @@ public class bounce_info : MonoBehaviour {
 		obj.AddComponent<SpriteRenderer>();
 		obj.GetComponent<SpriteRenderer>().sprite = image;
 		obj.AddComponent<AudioSource>().clip = sound;
-		obj.GetComponent<AudioSource>().Play();
+		obj.GetComponent<AudioSource>().PlayOneShot(sound);
 		StartCoroutine("died");
 		obj.transform.localScale = Vector3.zero;
 	}
