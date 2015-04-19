@@ -22,7 +22,6 @@ public class Atelier : MonoBehaviour {
 	}
 	void Update()
 	{
-		print (Math.Abs (transform.position.x - GameObject.FindGameObjectWithTag ("Player").transform.position.x));
 		if (click && !gocraft && Math.Abs (transform.position.x - GameObject.FindGameObjectWithTag ("Player").transform.position.x) <= 0.1f && (GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom>().moveRight || GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom>().moveLeft))
 		{
 			GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom>().DontMove();
