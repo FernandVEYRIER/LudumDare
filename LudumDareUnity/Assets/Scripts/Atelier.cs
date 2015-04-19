@@ -34,9 +34,9 @@ public class Atelier : MonoBehaviour {
 	void OnMouseDown()
 	{
 		int[] tmp = new int[3];
-		tmp [0] = inv.objects [0].index;
-		tmp [1] = inv.objects [1].index;
-		tmp [2] = inv.objects [2].index;
+		tmp [0] = inv.objects [0].theIndex;
+		tmp [1] = inv.objects [1].theIndex;
+		tmp [2] = inv.objects [2].theIndex;
 		Array.Sort (tmp);
 		print(tmp[0]);
 		print(tmp[1]);
