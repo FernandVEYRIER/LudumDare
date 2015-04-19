@@ -8,7 +8,7 @@ public class Drag : MonoBehaviour {
 
 	public obj thisObj = new obj();
 	private Vector3 screenPoint;
-	private Vector3 offset;
+	//private Vector3 offset;
 	private Vector3 originalPos;
 	private Vector3 refVel;
 	bool selfDragged = false;
@@ -24,7 +24,7 @@ public class Drag : MonoBehaviour {
 		InventoryHandler.isDragged = true;
 		selfDragged = true;
 		GameObject.Find("Inventory").GetComponent<InventoryHandler>().StartCoroutine("fadeWarning");
-		offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+		//offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
 	}
 
 	void OnMouseUp()

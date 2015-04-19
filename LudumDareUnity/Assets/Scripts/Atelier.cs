@@ -12,11 +12,9 @@ public class Atelier : MonoBehaviour {
 	public tab[] craft = new tab[1];
 	public Color flash_color;
 	private bool fl = false;
-	private Color save_col;
 	private InventoryHandler inv;
 	void Start()
 	{
-		save_col = Color.white;
 		inv = GameObject.Find ("Inventory").GetComponent<InventoryHandler> ();
 	}
 	void OnMouseEnter()

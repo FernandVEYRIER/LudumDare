@@ -3,15 +3,10 @@ using System.Collections;
 
 public class ChangeRoom : MonoBehaviour {
 
-	bool moveRight = false;
-	bool moveLeft = false;
+	public bool moveRight = false;
+	public bool moveLeft = false;
 	private Vector3 init;
-	Vector3 refVel;
-
-	void Start () 
-	{
-		init = transform.position;
-	}
+	public bool transition = false;
 	
 	void Update ()
 	{
@@ -46,5 +41,22 @@ public class ChangeRoom : MonoBehaviour {
 		moveRight = false;
 		moveLeft = false;
 		this.GetComponent<Animator>().SetBool("move", false);
+	}
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		if (col.tag == "Door" && transform.localScale.x == 1)
+			StartCoroutine(wait(col, -1));
+		else if (col.tag == "Door" && transform.localScale.x == -1)
+			StartCoroutine(wait(col, 1));
+	}
+	IEnumerator wait(Collider2D col, int sign)
+	{
+		transition = true;
+		DontMove();
+		Camera.main.GetComponent<FadeTransition>().StartCoroutine("Fade", col.GetComponent<door>().roomToGo);
+		yield return new WaitForSeconds (1);
+		transform.position = col.GetComponent<door>().exit.transform.position;
+		yield return new WaitForSeconds (1);
+		transition = false;
 	}
 }

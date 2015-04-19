@@ -6,7 +6,6 @@ public class bounce_info : MonoBehaviour {
 	public float duration;
 	public AudioClip sound;
 	private GameObject obj;
-	Vector3 velocity = Vector3.zero;
 	void Start()
 	{
 		this.GetComponent<SpriteRenderer>().enabled = false;
