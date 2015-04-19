@@ -2074,6 +2074,11 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 2.38000011
       objectReference: {fileID: 0}
+    - target: {fileID: 21249874, guid: ff1d37664b772eb4b994ed926c66f3d7, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 82ba8c013ba5b89409fac8471b91a720,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff1d37664b772eb4b994ed926c66f3d7, type: 2}
   m_IsPrefabParent: 0

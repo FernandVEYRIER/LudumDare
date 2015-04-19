@@ -8,4 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Intro.unity
   - enabled: 1
-    path: Assets/Scenes/Test-door.unity
+    path: Assets/Scenes/Functional-door.unity
