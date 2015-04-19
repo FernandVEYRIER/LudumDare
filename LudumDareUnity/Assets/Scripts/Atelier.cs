@@ -13,9 +13,18 @@ public class Atelier : MonoBehaviour {
 	public Color flash_color;
 	private bool fl = false;
 	private InventoryHandler inv;
+	private bool gocraft = false;
 	void Start()
 	{
 		inv = GameObject.Find ("Inventory").GetComponent<InventoryHandler> ();
+	}
+	void Update()
+	{
+		if (!gocraft && Math.Abs (transform.position.x - GameObject.FindGameObjectWithTag ("Player").transform.position.x) <= 0.1f && GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom>().moveRight)
+		{
+			GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom>().DontMove();
+			StartCoroutine (wait ());
+		}
 	}
 	void OnMouseEnter()
 	{
@@ -33,14 +42,20 @@ public class Atelier : MonoBehaviour {
 	}
 	void OnMouseDown()
 	{
+		if (!GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom> ().transition && Math.Abs(transform.position.x - GameObject.FindGameObjectWithTag ("Player").transform.position.x) > 0.1f)
+		{
+			if (GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform> ().position.x < transform.position.x)
+				GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom> ().MoveRight ();
+			else
+				GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom> ().MoveLeft ();
+		}
+		else if (!gocraft)
+			StartCoroutine (wait ());
 		int[] tmp = new int[3];
 		tmp [0] = inv.objects [0].theIndex;
 		tmp [1] = inv.objects [1].theIndex;
 		tmp [2] = inv.objects [2].theIndex;
 		Array.Sort (tmp);
-		print(tmp[0]);
-		print(tmp[1]);
-		print(tmp[2]);
 		foreach (tab elem in craft)
 		{
 			int i = 0;
@@ -61,5 +76,13 @@ public class Atelier : MonoBehaviour {
 			this.GetComponent<SpriteRenderer>().color = Color.white;
 			yield return new WaitForSeconds(0.2f);
 		}
+	}
+	IEnumerator wait()
+	{
+		gocraft = true;
+		GameObject.FindGameObjectWithTag ("Player").GetComponent<Animator> ().SetBool ("action", true);
+		yield return new WaitForSeconds(1.5f);
+		GameObject.FindGameObjectWithTag ("Player").GetComponent<Animator> ().SetBool ("action", false);
+		gocraft = false;
 	}
 }
