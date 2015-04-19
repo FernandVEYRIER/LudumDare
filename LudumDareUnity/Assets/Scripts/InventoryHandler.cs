@@ -20,7 +20,7 @@ public class InventoryHandler : MonoBehaviour {
 	[HideInInspector]
 	public bool canBeDropped = false;
 	public int index_drop = 0;
-	obj oldObj = new obj();
+	public obj oldObj = new obj();
 	public static bool isDragged = false;
 	
 	void Start()

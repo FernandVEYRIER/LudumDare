@@ -2028,6 +2028,14 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 408166, guid: ff1d37664b772eb4b994ed926c66f3d7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.85000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 408166, guid: ff1d37664b772eb4b994ed926c66f3d7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.38000011
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff1d37664b772eb4b994ed926c66f3d7, type: 2}
   m_IsPrefabParent: 0
@@ -2235,6 +2243,11 @@ MonoBehaviour:
   warningImage: {fileID: 1672439403}
   canBeDropped: 0
   index_drop: 0
+  oldObj:
+    index: 0
+    name: 
+    img: {fileID: 0}
+    theIndex: 0
 --- !u!114 &879630974
 MonoBehaviour:
   m_ObjectHideFlags: 0
