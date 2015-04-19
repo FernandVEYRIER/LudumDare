@@ -21,6 +21,8 @@ public class bounce_info : MonoBehaviour {
 	}
 	public void create_info_bulle(Sprite image)
 	{
+		if (obj)
+			Destroy (obj);
 		this.GetComponent<SpriteRenderer>().enabled = true;
 		obj = new GameObject();
 		obj.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.1f);

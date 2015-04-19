@@ -31,12 +31,20 @@ public class Drag : MonoBehaviour {
 	{
 		InventoryHandler inventory = GameObject.Find("Inventory").GetComponent<InventoryHandler>();
 		InventoryHandler.isDragged = false;
+		GameObject old_obj = GameObject.Find (inventory.oldObj.name);
 		selfDragged = false;
 		inventory.StopAllCoroutines();
 		inventory.resetWarning();
 		thisObj.index = inventory.index_drop;
 		if (inventory.canBeDropped)
 		{
+			if (inventory.oldObj.name != "empty" && old_obj.GetComponent<Collider2D>().enabled == false)
+			{
+				old_obj.GetComponent<Collider2D>().enabled = true;
+				StopCoroutine("fadetexture");
+				StartCoroutine(fadetexture(old_obj));
+				old_obj.GetComponent<SpriteRenderer>().enabled = true;
+			}
 			inventory.addObject(thisObj);
 			this.gameObject.GetComponent<Collider2D>().enabled = false;
 			GameObject.Find("Spawn_info").GetComponent<bounce_info>().create_info_bulle(this.GetComponent<SpriteRenderer>().sprite);
@@ -81,5 +89,16 @@ public class Drag : MonoBehaviour {
 			return;
 		this.GetComponent<SpriteRenderer>().enabled = true;
 		inventory.restoreObj(thisObj.index);
+	}
+	IEnumerator fadetexture(GameObject old_obj)
+	{
+		float i = 0;
+		old_obj.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 0);
+		while (i < 1)
+		{
+			old_obj.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, i);
+			yield return new WaitForSeconds(0.1f);
+			i += 0.1f;
+		}
 	}
 }
