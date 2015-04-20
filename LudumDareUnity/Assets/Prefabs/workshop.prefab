@@ -75,20 +75,20 @@ MonoBehaviour:
   erreur: {fileID: 21300000, guid: 6041ce2c7078ae44c9fa8d077be42285, type: 3}
   craft:
   - index: 05000000090000000e000000
-    death_anim: 0
-    weapon: {fileID: 0}
+    death_anim: 2
+    weapon: {fileID: 142392, guid: 973de9d58c5fc2f4ab9311b4098e4bdf, type: 2}
   - index: 020000000c0000000e000000
     death_anim: 3
     weapon: {fileID: 174520, guid: e5445287e2d7cde4e801f446fa714dcb, type: 2}
-  - index: 010000000200000003000000
-    death_anim: 0
-    weapon: {fileID: 0}
+  - index: 060000000f00000010000000
+    death_anim: 1
+    weapon: {fileID: 138444, guid: 5db68c45b31b4b147b4a4e3a5f59ea8d, type: 2}
   - index: 04000000050000000d000000
-    death_anim: 0
-    weapon: {fileID: 0}
+    death_anim: 2
+    weapon: {fileID: 169688, guid: c6a8c86f13c617e4aac0ddf51491d1bc, type: 2}
   - index: 090000000e0000000f000000
-    death_anim: 0
-    weapon: {fileID: 0}
+    death_anim: 2
+    weapon: {fileID: 121898, guid: a651994cefa53884297c7fcc168a93ce, type: 2}
   - index: 060000000f00000010000000
     death_anim: 0
     weapon: {fileID: 0}

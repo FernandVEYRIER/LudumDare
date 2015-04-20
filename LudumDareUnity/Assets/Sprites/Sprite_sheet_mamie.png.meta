@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c97fd5dc15041f5489dafac96e81fad5
-timeCreated: 1429378937
+timeCreated: 1429566515
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -63,7 +63,7 @@ TextureImporter:
         width: 200
         height: 234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Sprite_sheet_mamie_1
       rect:
@@ -73,7 +73,7 @@ TextureImporter:
         width: 200
         height: 234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Sprite_sheet_mamie_2
       rect:
@@ -83,7 +83,7 @@ TextureImporter:
         width: 200
         height: 234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Sprite_sheet_mamie_3
       rect:
@@ -93,17 +93,17 @@ TextureImporter:
         width: 200
         height: 234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Sprite_sheet_mamie_4
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
         width: 200
         height: 234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Sprite_sheet_mamie_5
       rect:
@@ -113,7 +113,7 @@ TextureImporter:
         width: 200
         height: 234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
