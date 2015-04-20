@@ -89,15 +89,15 @@ MonoBehaviour:
   - index: 090000000e0000000f000000
     death_anim: 2
     weapon: {fileID: 121898, guid: a651994cefa53884297c7fcc168a93ce, type: 2}
-  - index: 060000000f00000010000000
-    death_anim: 0
-    weapon: {fileID: 0}
+  - index: 070000000a00000010000000
+    death_anim: 1
+    weapon: {fileID: 155032, guid: f60011045924c864fba6a91f584b1f72, type: 2}
   - index: 04000000070000000a000000
     death_anim: 0
     weapon: {fileID: 0}
   - index: 040000000a0000000b000000
-    death_anim: 0
-    weapon: {fileID: 0}
+    death_anim: 1
+    weapon: {fileID: 171504, guid: c1e45e8013144e54c9e34126af4c30a2, type: 2}
   - index: 010000000300000006000000
     death_anim: 0
     weapon: {fileID: 0}
