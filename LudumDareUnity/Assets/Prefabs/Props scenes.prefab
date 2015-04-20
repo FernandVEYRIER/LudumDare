@@ -799,7 +799,7 @@ MonoBehaviour:
     index: 0
     name: Balais
     img: {fileID: 21300000, guid: 9e16f74f7743de4448c869148b5eb34a, type: 3}
-    theIndex: 0
+    theIndex: 7
 --- !u!114 &11405190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -854,7 +854,7 @@ MonoBehaviour:
     index: 0
     name: Poule
     img: {fileID: 21300000, guid: 2c5c3c515d8fd0e43aaab6873d079b6b, type: 3}
-    theIndex: 0
+    theIndex: 15
 --- !u!114 &11430568
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -883,7 +883,7 @@ MonoBehaviour:
     index: 1
     name: CanneAPeche
     img: {fileID: 21300000, guid: 1234dc134fe70b94185ae3cb4c12a134, type: 3}
-    theIndex: 4
+    theIndex: 6
 --- !u!114 &11440106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -928,7 +928,7 @@ MonoBehaviour:
     index: 0
     name: Machette
     img: {fileID: 21300000, guid: 5cfc565481f0c42488e7bb522278b18e, type: 3}
-    theIndex: 0
+    theIndex: 16
 --- !u!114 &11446798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -996,7 +996,7 @@ MonoBehaviour:
     index: 1
     name: Poney
     img: {fileID: 21300000, guid: e17462241f6413c4a9f6820ca40d6989, type: 3}
-    theIndex: 4
+    theIndex: 9
 --- !u!114 &11471386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1012,7 +1012,7 @@ MonoBehaviour:
     index: 1
     name: Couteau
     img: {fileID: 21300000, guid: 0bf10b151a66c7f4ca4bfabad4e35850, type: 3}
-    theIndex: 9
+    theIndex: 10
 --- !u!114 &11472032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1028,7 +1028,7 @@ MonoBehaviour:
     index: 0
     name: Dentier
     img: {fileID: 21300000, guid: 1f7eaa1064a0d73408d723ae54955220, type: 3}
-    theIndex: 0
+    theIndex: 1
 --- !u!114 &11474336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1086,7 +1086,7 @@ MonoBehaviour:
     index: 0
     name: Mentos
     img: {fileID: 21300000, guid: c5245bf191cd7e34897e05457fe0c90d, type: 3}
-    theIndex: 0
+    theIndex: 5
 --- !u!114 &11486760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1128,7 +1128,7 @@ MonoBehaviour:
     index: 1
     name: Caniche
     img: {fileID: 21300000, guid: b74471b465dc19e40a380698e1d080d2, type: 3}
-    theIndex: 4
+    theIndex: 3
 --- !u!114 &11493950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1144,7 +1144,7 @@ MonoBehaviour:
     index: 1
     name: Coca
     img: {fileID: 21300000, guid: a6d25ab01161574459339708eb24be97, type: 3}
-    theIndex: 4
+    theIndex: 13
 --- !u!114 &11494276
 MonoBehaviour:
   m_ObjectHideFlags: 1
