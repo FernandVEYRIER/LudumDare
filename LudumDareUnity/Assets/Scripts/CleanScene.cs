@@ -57,6 +57,7 @@ public class CleanScene : MonoBehaviour {
 			GameObject.Find("Canvas").SetActive(false);
 		GameObject.Find("PixelEffector").GetComponent<PixelEffector>().startTransition();
 		yield return new WaitForSeconds(1.3f);
+		PlayerPrefs.SetInt("Cookies", PlayerPrefs.GetInt("Cookies"));
 		Application.LoadLevel("CutScene");
 	}
 }
