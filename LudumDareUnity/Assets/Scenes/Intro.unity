@@ -181,6 +181,7 @@ GameObject:
   - 4: {fileID: 1078318344}
   - 212: {fileID: 1078318343}
   - 95: {fileID: 1078318342}
+  - 114: {fileID: 1078318345}
   m_Layer: 0
   m_Name: Video
   m_TagString: Untagged
@@ -243,3 +244,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1078318345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1078318341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 871160368c18497438377b1aee8c0d9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

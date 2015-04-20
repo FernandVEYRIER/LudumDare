@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 491256}
   - 212: {fileID: 21234280}
   - 114: {fileID: 11467470}
+  - 60: {fileID: 6040932}
   m_Layer: 0
   m_Name: workshop
   m_TagString: Untagged
@@ -24,11 +25,41 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -45.1399994, y: -1.20599997, z: 0}
+  m_LocalPosition: {x: 41.4300003, y: -1.49000001, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!60 &6040932
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131612}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 1.86306381, y: 1.00299025}
+      - {x: -1.02770615, y: .981056988}
+      - {x: -1.02595901, y: 1.10846055}
+      - {x: -1.37865067, y: 1.10525048}
+      - {x: -1.37714767, y: .994549215}
+      - {x: -1.61363983, y: .986167073}
+      - {x: -1.61289215, y: 1.06336105}
+      - {x: -1.83000183, y: 1.06884801}
+      - {x: -1.83443832, y: .987259984}
+      - {x: -2.09085464, y: .985608459}
+      - {x: -2.23618698, y: .800926208}
+      - {x: -2.25, y: -1.11000001}
+      - {x: 2.12130356, y: -1.11000001}
+      - {x: 2.10770035, y: -.517298937}
+      - {x: 2.25, y: -.491655588}
+      - {x: 2.21907425, y: .517082334}
+      - {x: 2.10401917, y: .800149322}
 --- !u!114 &11467470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -40,6 +71,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38fcb5d426cc9a04b8cb439014d7923f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  valid: {fileID: 21300000, guid: 96f3bc9cae3068a49a641db6a798ca3c, type: 3}
+  erreur: {fileID: 21300000, guid: 6041ce2c7078ae44c9fa8d077be42285, type: 3}
   craft:
   - index: 05000000090000000e000000
   - index: 020000000c0000000e000000
@@ -51,6 +84,7 @@ MonoBehaviour:
   - index: 040000000a0000000b000000
   - index: 070000000a00000010000000
   flash_color: {r: .191176474, g: 1, b: .330628842, a: 1}
+  click: 0
 --- !u!212 &21234280
 SpriteRenderer:
   m_ObjectHideFlags: 1

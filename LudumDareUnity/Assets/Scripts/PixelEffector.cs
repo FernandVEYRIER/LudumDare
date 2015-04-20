@@ -133,7 +133,7 @@ public class PixelEffector : MonoBehaviour {
 		GameObject tmp;
 		tmp = GameObject.CreatePrimitive(PrimitiveType.Quad);
 		tmp.tag = "Finish";
-		tmp.transform.position = new Vector3(i + this.transform.position.x, j + this.transform.position.y, -2);
+		tmp.transform.position = new Vector3(i + this.transform.position.x, j + this.transform.position.y, -8);
 		tmp.transform.parent = emptyObj.transform;
 	}
 

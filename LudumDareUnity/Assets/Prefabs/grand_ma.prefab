@@ -29,7 +29,7 @@ GameObject:
   - 212: {fileID: 21252742}
   - 114: {fileID: 11437494}
   - 61: {fileID: 6178962}
-  - 95: {fileID: 9515450}
+  - 95: {fileID: 9553358}
   m_Layer: 0
   m_Name: grand_ma
   m_TagString: Player
@@ -75,7 +75,7 @@ BoxCollider2D:
   m_Offset: {x: -.0424476862, y: 0}
   serializedVersion: 2
   m_Size: {x: 2.6586597, y: 4.67999983}
---- !u!95 &9515450
+--- !u!95 &9553358
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 2
-  sound: {fileID: 0}
+  sound: {fileID: 8300000, guid: 9f8d47eb8274b7243be0e16a04d8e4d0, type: 3}
   src: {fileID: 182264, guid: b79192a2c7f155a4d80a2487cf67f5b7, type: 2}
   parent: {fileID: 180690}
 --- !u!114 &11437494
