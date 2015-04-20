@@ -2132,6 +2132,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 132352, guid: 046e6c240d1facb4eab6a311cc26821c, type: 2}
+      propertyPath: m_TagString
+      value: Scout
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 046e6c240d1facb4eab6a311cc26821c, type: 2}
   m_IsPrefabParent: 0
@@ -3035,6 +3039,38 @@ Transform:
   - {fileID: 1771130870}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &1154025799 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 197810, guid: d0148e990b8822a44802ee67eec3ff86, type: 2}
+  m_PrefabInternal: {fileID: 1757756907}
+--- !u!95 &1154025800
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1154025799}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 36f768ed42fb88d4eb8d46ea9a8cd44d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1154025805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1154025799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321d22514bd34a644972e19905ccc3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1159664074
 Prefab:
   m_ObjectHideFlags: 0
@@ -4444,6 +4480,10 @@ Prefab:
     - target: {fileID: 473196, guid: fb66ec43adb99a9459da76b0d1b5b40c, type: 2}
       propertyPath: m_RootOrder
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 175898, guid: fb66ec43adb99a9459da76b0d1b5b40c, type: 2}
+      propertyPath: m_TagString
+      value: Scout
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb66ec43adb99a9459da76b0d1b5b40c, type: 2}
