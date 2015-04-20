@@ -18,7 +18,7 @@ public class active_fire1 : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-		if (!play_one && GameObject.Find("scout2").GetComponent<Animator> ().GetInteger ("anim") == 3)
+		if (!play_one && GameObject.FindGameObjectWithTag("Scout").GetComponent<Animator> ().GetInteger ("anim") == 3)
 			StartCoroutine (play ());
 	}
 }
