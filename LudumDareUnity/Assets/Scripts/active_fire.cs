@@ -5,6 +5,10 @@ public class active_fire : MonoBehaviour {
 
 	private bool play_one = false;
 	// Update is called once per frame
+	void Start()
+	{
+		this.GetComponent<ParticleSystem> ().Stop();
+	}
 	void Update ()
 	{
 		if (!play_one && this.GetComponentInParent<Animator> ().GetInteger ("anim") == 3)
@@ -13,10 +17,8 @@ public class active_fire : MonoBehaviour {
 	IEnumerator play()
 	{
 		play_one = true;
-		this.GetComponent<ParticleRenderer> ().enabled = true;
-		this.transform.GetChild(0).GetComponent<ParticleRenderer> ().enabled = true;
-		yield return new WaitForSeconds (2);
-		this.GetComponent<ParticleRenderer> ().enabled = false;
-		this.transform.GetChild(0).GetComponent<ParticleRenderer> ().enabled = false;
+		this.GetComponent<ParticleSystem> ().Play ();
+		yield return new WaitForSeconds (1.5f);
+		this.GetComponent<ParticleSystem> ().Stop();
 	}
 }

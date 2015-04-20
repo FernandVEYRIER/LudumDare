@@ -5,14 +5,16 @@ public class active_fire1 : MonoBehaviour {
 
 	// Use this for initialization
 	private bool play_one = false;
+	void Start()
+	{
+		this.GetComponent<ParticleSystem> ().Stop();
+	}
 	IEnumerator play()
 	{
 		play_one = true;
-		this.GetComponent<ParticleRenderer> ().enabled = true;
-		this.transform.GetChild(0).GetComponent<ParticleRenderer> ().enabled = true;
-		yield return new WaitForSeconds (2);
-		this.GetComponent<ParticleRenderer> ().enabled = false;
-		this.transform.GetChild(0).GetComponent<ParticleRenderer> ().enabled = false;
+		this.GetComponent<ParticleSystem> ().Play ();
+		yield return new WaitForSeconds (1.5f);
+		this.GetComponent<ParticleSystem> ().Stop();
 	}
 	// Update is called once per frame
 	void Update () {

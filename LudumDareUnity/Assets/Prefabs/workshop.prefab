@@ -98,6 +98,9 @@ MonoBehaviour:
   - index: 040000000a0000000b000000
     death_anim: 0
     weapon: {fileID: 0}
+  - index: 010000000300000006000000
+    death_anim: 0
+    weapon: {fileID: 0}
   - index: 070000000a00000010000000
     death_anim: 0
     weapon: {fileID: 0}
