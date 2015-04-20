@@ -4,14 +4,7 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 
 	public GameObject pausePanel;
-
-	void Start () {
-	
-	}
-	
-	void Update () {
-	
-	}
+	public GameObject creditsPanel;
 
 	public void dispPause()
 	{
@@ -22,5 +15,11 @@ public class GameManager : MonoBehaviour {
 	public void quitGame()
 	{
 		Application.Quit();
+	}
+
+	public void affCredits()
+	{
+		Time.timeScale = (Time.timeScale == 0) ? 1 : 0;
+		creditsPanel.SetActive(!creditsPanel.activeSelf);
 	}
 }
