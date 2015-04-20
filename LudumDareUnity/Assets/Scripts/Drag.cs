@@ -24,11 +24,13 @@ public class Drag : MonoBehaviour {
 		InventoryHandler.isDragged = true;
 		selfDragged = true;
 		GameObject.Find("Inventory").GetComponent<InventoryHandler>().StartCoroutine("fadeWarning");
+		this.GetComponent<SpriteRenderer> ().sortingOrder = 10;
 		//offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
 	}
 
 	void OnMouseUp()
 	{
+		this.GetComponent<SpriteRenderer> ().sortingOrder = 0;
 		InventoryHandler inventory = GameObject.Find("Inventory").GetComponent<InventoryHandler>();
 		InventoryHandler.isDragged = false;
 		GameObject old_obj = GameObject.Find (inventory.oldObj.name);
