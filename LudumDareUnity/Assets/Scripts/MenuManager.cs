@@ -20,6 +20,10 @@ public class MenuManager : MonoBehaviour {
 
 	public void Quit()
 	{
+#if UNITY_WEBPLAYER
+		Application.ExternalEval("window.close()");
+#else
 		Application.Quit();
+#endif
 	}
 }

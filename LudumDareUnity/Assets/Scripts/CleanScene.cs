@@ -23,11 +23,16 @@ public class CleanScene : MonoBehaviour {
 		if (!animPlaying && scout.GetComponent<Animator>().GetInteger("anim") != 0)
 		{
 			animPlaying = true;
-			this.GetComponent<Animator>().enabled = true;
-			this.GetComponent<Collider2D>().enabled = false;
-			Invoke("ResetClean", 2f);
+			Invoke("StartClean", 2f);
+			Invoke("ResetClean", 4f);
 		}
 
+	}
+
+	void StartClean()
+	{
+		this.GetComponent<Animator>().enabled = true;
+		this.GetComponent<Collider2D>().enabled = false;
 	}
 
 	void ResetClean()
