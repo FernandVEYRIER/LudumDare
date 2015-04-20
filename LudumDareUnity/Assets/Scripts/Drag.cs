@@ -93,7 +93,8 @@ public class Drag : MonoBehaviour {
 		this.GetComponent<SpriteRenderer>().enabled = true;
 		inventory.restoreObj(thisObj.index);
 	}
-	IEnumerator fadetexture(GameObject old_obj)
+
+	public IEnumerator fadetexture(GameObject old_obj)
 	{
 		float i = 0;
 		old_obj.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 0);

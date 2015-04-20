@@ -19,6 +19,7 @@ public class InventoryHandler : MonoBehaviour {
 	public Image warningImage;
 	[HideInInspector]
 	public bool canBeDropped = false;
+	[HideInInspector]
 	public int index_drop = 0;
 	public obj oldObj = new obj();
 	public static bool isDragged = false;
@@ -118,5 +119,19 @@ public class InventoryHandler : MonoBehaviour {
 	public void showInventory()
 	{
 		GameObject.Find("Canvas").GetComponent<Canvas>().enabled = true;
+	}
+
+	public void emptyStash()
+	{
+		GameObject _obj;
+		for (int i = 0; i < 3; i++)
+		{
+			_obj = GameObject.Find(objects[i].name);
+			_obj.GetComponent<Collider2D>().enabled = true;
+			_obj.GetComponent<Drag>().StopCoroutine("fadetexture");
+			_obj.GetComponent<Drag>().StartCoroutine("fadetexture", _obj);
+			_obj.GetComponent<SpriteRenderer>().enabled = true;
+			removeObj(i);
+		}
 	}
 }

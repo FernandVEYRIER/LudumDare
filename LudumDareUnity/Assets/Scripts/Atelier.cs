@@ -113,12 +113,13 @@ public class Atelier : MonoBehaviour {
 		else
 		{
 			GameObject.FindWithTag("Player").GetComponent<Animator>().SetBool("weapon", true);
-			GameObject.Find ("Spawn_info").GetComponent<bubble_inf> ().show (valid);
 			yield return new WaitForSeconds(2);
+			GameObject.Find ("Spawn_info").GetComponent<bubble_inf> ().show (valid);
 			tmp = (GameObject)Instantiate(weapon, GameObject.Find("Spawn_weapon").transform.position, GameObject.Find("Spawn_weapon").transform.rotation);
 			tmp.transform.localScale = GameObject.FindWithTag("Player").transform.localScale;
 			tmp.transform.SetParent(GameObject.FindWithTag("Player").transform);
 			GameObject.FindGameObjectWithTag ("Player").GetComponent<Animator> ().SetBool ("action", false);
+			GameObject.Find ("Inventory").GetComponent<InventoryHandler>().emptyStash();
 		}
 		click = false;
 	}
