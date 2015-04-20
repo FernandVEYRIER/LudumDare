@@ -92,18 +92,12 @@ MonoBehaviour:
   - index: 070000000a00000010000000
     death_anim: 1
     weapon: {fileID: 155032, guid: f60011045924c864fba6a91f584b1f72, type: 2}
-  - index: 04000000070000000a000000
-    death_anim: 0
-    weapon: {fileID: 0}
   - index: 040000000a0000000b000000
     death_anim: 1
     weapon: {fileID: 171504, guid: c1e45e8013144e54c9e34126af4c30a2, type: 2}
-  - index: 010000000300000006000000
-    death_anim: 0
-    weapon: {fileID: 0}
-  - index: 070000000a00000010000000
-    death_anim: 0
-    weapon: {fileID: 0}
+  - index: 02000000030000000c000000
+    death_anim: 3
+    weapon: {fileID: 149448, guid: 637a77fb4ff14b242a762f7d2b7029bf, type: 2}
   flash_color: {r: .191176474, g: 1, b: .330628842, a: 1}
   click: 0
   last_anim: 0
