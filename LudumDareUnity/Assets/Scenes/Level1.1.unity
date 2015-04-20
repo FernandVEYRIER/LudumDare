@@ -599,6 +599,60 @@ SpriteRenderer:
 Transform:
   m_PrefabParentObject: {fileID: 487964, guid: 98dfb78913838f74fae1e2683cdea0e8, type: 2}
   m_PrefabInternal: {fileID: 925901661}
+--- !u!1001 &336842310
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 478868, guid: 71f005f64dd790443ac2a192a9f82532, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.65004361
+      objectReference: {fileID: 0}
+    - target: {fileID: 478868, guid: 71f005f64dd790443ac2a192a9f82532, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.293757796
+      objectReference: {fileID: 0}
+    - target: {fileID: 478868, guid: 71f005f64dd790443ac2a192a9f82532, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478868, guid: 71f005f64dd790443ac2a192a9f82532, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478868, guid: 71f005f64dd790443ac2a192a9f82532, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478868, guid: 71f005f64dd790443ac2a192a9f82532, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478868, guid: 71f005f64dd790443ac2a192a9f82532, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478868, guid: 71f005f64dd790443ac2a192a9f82532, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 478868, guid: 71f005f64dd790443ac2a192a9f82532, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 478868, guid: 71f005f64dd790443ac2a192a9f82532, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 478868, guid: 71f005f64dd790443ac2a192a9f82532, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .400000006
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 71f005f64dd790443ac2a192a9f82532, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &357244151 stripped
 Transform:
   m_PrefabParentObject: {fileID: 487964, guid: 98dfb78913838f74fae1e2683cdea0e8, type: 2}
@@ -1100,7 +1154,7 @@ RectTransform:
   - {fileID: 1212818052}
   - {fileID: 1418727539}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1930,7 +1984,7 @@ Transform:
   - {fileID: 480462309}
   - {fileID: 531595944}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!212 &554233785
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2074,7 +2128,7 @@ Transform:
   m_Children:
   - {fileID: 1415068327}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!114 &664803602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3033,7 +3087,7 @@ Transform:
   - {fileID: 841295774}
   - {fileID: 1771130870}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
 --- !u!1001 &1159664074
 Prefab:
   m_ObjectHideFlags: 0
@@ -3114,7 +3168,7 @@ Transform:
   - {fileID: 1139631148}
   - {fileID: 988614991}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
 --- !u!1 &1199626098
 GameObject:
   m_ObjectHideFlags: 0
@@ -4078,7 +4132,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!61 &1519577880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4157,7 +4211,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 491256, guid: 91794a450460beb4fa34e95ae843e7b5, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 91794a450460beb4fa34e95ae843e7b5, type: 2}
@@ -5185,7 +5239,7 @@ Transform:
   - {fileID: 357244151}
   - {fileID: 326335928}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!212 &1969245499
 SpriteRenderer:
   m_ObjectHideFlags: 0
