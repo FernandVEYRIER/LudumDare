@@ -11,7 +11,7 @@ public class CleanScene : MonoBehaviour {
 		animPlaying = false;
 		this.GetComponent<Animator>().enabled = false;
 		scout = GameObject.FindGameObjectWithTag("Scout");
-	}
+    }
 	
 	void Update () 
 	{
@@ -33,6 +33,7 @@ public class CleanScene : MonoBehaviour {
 	{
 		this.GetComponent<Animator>().enabled = true;
 		this.GetComponent<Collider2D>().enabled = false;
+		StartCoroutine(removeScout());
 	}
 
 	void ResetClean()
@@ -40,5 +41,16 @@ public class CleanScene : MonoBehaviour {
 		this.GetComponent<Animator>().enabled = false;
 		this.GetComponent<Collider2D>().enabled = true;
 		//Reload Video
+	}
+
+	IEnumerator removeScout()
+	{
+		GameObject scout = GameObject.FindGameObjectWithTag("Scout");
+		yield return new WaitForSeconds(1);
+        for (float i = 1; i >= 0; i -= 0.03f)
+		{
+			scout.GetComponent<SpriteRenderer>().material.color = new Color(1, 1, 1, i);
+			yield return new WaitForSeconds(0.00001f);
+		}
 	}
 }

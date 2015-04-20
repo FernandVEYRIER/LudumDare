@@ -5,7 +5,7 @@ public class active_fire : MonoBehaviour {
 
 	private bool play_one = false;
 	// Update is called once per frame
-	void Start()
+	void Awake()
 	{
 		this.GetComponent<ParticleSystem> ().Stop();
 	}

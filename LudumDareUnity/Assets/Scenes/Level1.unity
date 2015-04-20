@@ -2134,7 +2134,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 132352, guid: 046e6c240d1facb4eab6a311cc26821c, type: 2}
       propertyPath: m_TagString
-      value: Scout
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 046e6c240d1facb4eab6a311cc26821c, type: 2}
