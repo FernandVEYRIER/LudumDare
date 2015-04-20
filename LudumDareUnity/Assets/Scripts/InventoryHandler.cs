@@ -51,6 +51,7 @@ public class InventoryHandler : MonoBehaviour {
 	{
 		objects[index].name = "empty";
 		objects[index].img = emptySlot;
+		objects[index].theIndex = 0;
 		spritesObj[index].sprite = emptySlot;
 	}
 
