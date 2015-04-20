@@ -470,7 +470,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 13
 --- !u!1 &165413374 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 158638, guid: 98dfb78913838f74fae1e2683cdea0e8, type: 2}
@@ -2223,7 +2223,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 495242, guid: 046e6c240d1facb4eab6a311cc26821c, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 132352, guid: 046e6c240d1facb4eab6a311cc26821c, type: 2}
       propertyPath: m_TagString
@@ -3244,7 +3244,7 @@ Transform:
   - {fileID: 1139631148}
   - {fileID: 988614991}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!1 &1199626098
 GameObject:
   m_ObjectHideFlags: 0
@@ -4228,7 +4228,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
 --- !u!61 &1519577880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4604,7 +4604,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 473196, guid: fb66ec43adb99a9459da76b0d1b5b40c, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 175898, guid: fb66ec43adb99a9459da76b0d1b5b40c, type: 2}
       propertyPath: m_TagString
