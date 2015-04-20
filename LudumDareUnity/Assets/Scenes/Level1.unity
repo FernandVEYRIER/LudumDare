@@ -3114,6 +3114,10 @@ Prefab:
       propertyPath: sizeY
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 11434456, guid: f2821fda63c4e1e4a81237cee9f3db06, type: 2}
+      propertyPath: quadPrefab
+      value: 
+      objectReference: {fileID: 166396, guid: 5ef8a2e7381ea9c40af6d93c020fdc3a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2821fda63c4e1e4a81237cee9f3db06, type: 2}
   m_IsPrefabParent: 0

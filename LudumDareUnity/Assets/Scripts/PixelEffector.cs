@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PixelEffector : MonoBehaviour {
 
+	public GameObject quadPrefab;
+
 	GameObject emptyObj;
 
 	public int sizeX = 300;
@@ -65,7 +67,6 @@ public class PixelEffector : MonoBehaviour {
 			++quadCount;
 		}
 		clearTab();
-
 	}
 
 	void pixelFX()
@@ -131,7 +132,7 @@ public class PixelEffector : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(0.5f + delay * 0.002f);
 		GameObject tmp;
-		tmp = GameObject.CreatePrimitive(PrimitiveType.Quad);
+		tmp = (GameObject) Instantiate(quadPrefab, Vector3.zero, Quaternion.identity);
 		tmp.tag = "Finish";
 		tmp.transform.position = new Vector3(i + this.transform.position.x, j + this.transform.position.y, -8);
 		tmp.transform.parent = emptyObj.transform;
