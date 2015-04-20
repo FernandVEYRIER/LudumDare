@@ -65,6 +65,7 @@ GameObject:
   - 114: {fileID: 11446798}
   - 60: {fileID: 6072404}
   - 114: {fileID: 11422492}
+  - 95: {fileID: 9527456}
   m_Layer: 0
   m_Name: Poule
   m_TagString: Untagged
@@ -198,6 +199,7 @@ GameObject:
   - 61: {fileID: 6177862}
   - 114: {fileID: 11491998}
   - 114: {fileID: 11417208}
+  - 95: {fileID: 9523160}
   m_Layer: 0
   m_Name: Caniche
   m_TagString: Untagged
@@ -274,6 +276,8 @@ GameObject:
   - 114: {fileID: 11400422}
   - 60: {fileID: 6015726}
   - 114: {fileID: 11405176}
+  - 95: {fileID: 9581090}
+  - 114: {fileID: 11451204}
   m_Layer: 0
   m_Name: Balais
   m_TagString: Untagged
@@ -463,7 +467,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.3699989, y: 1.23000002, z: 0}
+  m_LocalPosition: {x: 69.1399994, y: 2.86999989, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 425292}
@@ -771,6 +775,57 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: .400000006, y: .400000006}
+--- !u!95 &9523160
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164928}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b0af2b9f755f3b4aa2360bfb9bfdb57, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &9527456
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123870}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7cb40dabae681be47b42a3ef42180123, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &9581090
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197810}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 36f768ed42fb88d4eb8d46ea9a8cd44d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11400422
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -942,6 +997,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texture_over: {fileID: 2800000, guid: e7061dbd8c1a5f348a186924701e3e08, type: 3}
   texture_click: {fileID: 2800000, guid: b4c132ec42c4efb4d919ea964c901baa, type: 3}
+--- !u!114 &11451204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321d22514bd34a644972e19905ccc3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11451206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -994,7 +1060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisObj:
     index: 1
-    name: Poney
+    name: Acide
     img: {fileID: 21300000, guid: e17462241f6413c4a9f6820ca40d6989, type: 3}
     theIndex: 9
 --- !u!114 &11471386
@@ -1434,7 +1500,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 87c3814da0855944e8fc503e5b9b81fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21238980
