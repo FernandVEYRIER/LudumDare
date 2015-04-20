@@ -4,17 +4,47 @@ using UnityEngine.UI;
 
 public class bubble_inf : MonoBehaviour {
 
-	public GameObject canvas;
+	public float duration = 0.5f;
+	private GameObject canvas;
+	public AudioClip sound;
+	public GameObject src;
 	public GameObject parent;
+	private bool activate = false;
 	void Update ()
 	{
 		float mult;
-		canvas.transform.position = transform.position;
-		if  ((canvas.transform.localScale.x > 0 && parent.transform.localScale.x < 0) || (canvas.transform.localScale.x < 0 && parent.transform.localScale.x > 0))
-			canvas.transform.localScale = new Vector3(canvas.transform.localScale.x * -1, canvas.transform.localScale.y, canvas.transform.localScale.z);
-	}
-	public void create_bubble(Sprite spr)
-	{
+		if (canvas)
+		{
+			canvas.transform.position = transform.position;
 
+			if (activate)
+				canvas.transform.localScale = Vector3.Lerp (canvas.transform.localScale, Vector3.one * 0.02f, 4 * Time.deltaTime);
+		}
+	}
+	public void show(Sprite spr)
+	{
+		if (canvas)
+			Destroy (canvas);
+		canvas = (GameObject)Instantiate (src, transform.position, transform.rotation);
+		canvas.transform.SetParent(this.transform);
+		canvas.AddComponent<AudioSource>().clip = sound;
+		canvas.GetComponent<AudioSource>().PlayOneShot(sound);
+		canvas.transform.GetChild(0).GetChild(0).GetComponent<Image>().sprite = spr;
+		canvas.transform.localScale = Vector3.zero;
+		StartCoroutine (died());
+	}
+
+
+
+	IEnumerator died()
+	{
+		activate = true;
+		yield return new WaitForSeconds(0.5f);
+		activate = false;
+		duration -= 0.5f;
+		if (duration < 0)
+			duration = 0;
+		yield return new WaitForSeconds(duration);
+		Destroy(canvas);
 	}
 }

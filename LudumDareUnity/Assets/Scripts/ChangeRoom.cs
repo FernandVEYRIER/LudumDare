@@ -13,8 +13,9 @@ public class ChangeRoom : MonoBehaviour {
 	void Update ()
 	{
 
-		//print(Mathf.Abs (transform.position.x - target));
-		if (Input.GetMouseButtonDown (0) && !transition)
+		if (this.GetComponent<Animator> ().GetBool ("action"))
+			DontMove ();
+		if (Input.GetMouseButtonDown (0) && !transition && !this.GetComponent<Animator>().GetBool("action"))
 		{
 			print (target);
 			target = Camera.main.ScreenToWorldPoint (Input.mousePosition).x;

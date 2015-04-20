@@ -47,7 +47,8 @@ public class Drag : MonoBehaviour {
 			}
 			inventory.addObject(thisObj);
 			this.gameObject.GetComponent<Collider2D>().enabled = false;
-			GameObject.Find("Spawn_info").GetComponent<bounce_info>().create_info_bulle(this.GetComponent<SpriteRenderer>().sprite);
+			//GameObject.Find("Spawn_info").GetComponent<bounce_info>().create_info_bulle(this.GetComponent<SpriteRenderer>().sprite);
+			GameObject.Find("Spawn_info").GetComponent<bubble_inf>().show(this.GetComponent<SpriteRenderer>().sprite);
 		}
 	}
 

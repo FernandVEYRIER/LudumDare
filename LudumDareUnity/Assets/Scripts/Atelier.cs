@@ -27,6 +27,8 @@ public class Atelier : MonoBehaviour {
 			GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom>().DontMove();
 			StartCoroutine (wait ());
 		}
+		if (GameObject.FindGameObjectWithTag ("Player").GetComponent<Animator>().GetBool("action"))
+			GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom>().DontMove();
 	}
 	void OnMouseEnter()
 	{
