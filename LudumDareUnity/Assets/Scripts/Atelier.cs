@@ -8,6 +8,7 @@ public class Atelier : MonoBehaviour {
 	public class tab
 	{
 		public int[] index = new int[3];
+		public int death_anim;
 	}
 	public Sprite valid;
 	public Sprite erreur;
@@ -18,6 +19,8 @@ public class Atelier : MonoBehaviour {
 	private bool gocraft = false;
 	[HideInInspector]
 	public bool click = false;
+	[HideInInspector]
+	public int last_anim = 0;
 	void Start()
 	{
 		inv = GameObject.Find ("Inventory").GetComponent<InventoryHandler> ();
@@ -70,7 +73,11 @@ public class Atelier : MonoBehaviour {
 			while (i < 3 && tmp[i] == elem.index[i])
 				i++;
 			if (i == 3)
+			{
+				last_anim = elem.death_anim;
 				plop = true;
+				break;
+			}
 		}
 		StartCoroutine (wait_v(plop));
 	}
@@ -97,8 +104,11 @@ public class Atelier : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(2f);
 		if (!plop)
-			GameObject.Find("Spawn_info").GetComponent<bubble_inf>().show(erreur);
+			GameObject.Find ("Spawn_info").GetComponent<bubble_inf> ().show (erreur);
 		else
-			GameObject.Find("Spawn_info").GetComponent<bubble_inf>().show(valid);
+		{
+			GameObject.FindWithTag("Player").GetComponent<Animator>().SetBool("weapon", true);
+			GameObject.Find ("Spawn_info").GetComponent<bubble_inf> ().show (valid);
+		}
 	}
 }
