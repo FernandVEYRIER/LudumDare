@@ -76,22 +76,31 @@ MonoBehaviour:
   craft:
   - index: 05000000090000000e000000
     death_anim: 0
+    weapon: {fileID: 0}
   - index: 020000000c0000000e000000
     death_anim: 3
+    weapon: {fileID: 174520, guid: e5445287e2d7cde4e801f446fa714dcb, type: 2}
   - index: 010000000200000003000000
     death_anim: 0
+    weapon: {fileID: 0}
   - index: 04000000050000000d000000
     death_anim: 0
+    weapon: {fileID: 0}
   - index: 090000000e0000000f000000
     death_anim: 0
+    weapon: {fileID: 0}
   - index: 060000000f00000010000000
     death_anim: 0
+    weapon: {fileID: 0}
   - index: 04000000070000000a000000
     death_anim: 0
+    weapon: {fileID: 0}
   - index: 040000000a0000000b000000
     death_anim: 0
+    weapon: {fileID: 0}
   - index: 070000000a00000010000000
     death_anim: 0
+    weapon: {fileID: 0}
   flash_color: {r: .191176474, g: 1, b: .330628842, a: 1}
   click: 0
   last_anim: 0

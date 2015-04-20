@@ -9,6 +9,7 @@ public class Atelier : MonoBehaviour {
 	{
 		public int[] index = new int[3];
 		public int death_anim;
+		public GameObject weapon;
 	}
 	public Sprite valid;
 	public Sprite erreur;
@@ -53,6 +54,7 @@ public class Atelier : MonoBehaviour {
 	{
 		click = true;
 		bool plop = false;
+		GameObject weapon = craft[0].weapon;
 		if (!GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom> ().transition && Math.Abs(transform.position.x - GameObject.FindGameObjectWithTag ("Player").transform.position.x) > 0.1f)
 		{
 			if (GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform> ().position.x < transform.position.x)
@@ -76,10 +78,11 @@ public class Atelier : MonoBehaviour {
 			{
 				last_anim = elem.death_anim;
 				plop = true;
+				weapon = elem.weapon;
 				break;
 			}
 		}
-		StartCoroutine (wait_v(plop));
+		StartCoroutine (wait_v(plop, weapon));
 	}
 	IEnumerator flash()
 	{
@@ -100,15 +103,23 @@ public class Atelier : MonoBehaviour {
 		GameObject.FindGameObjectWithTag ("Player").GetComponent<Animator> ().SetBool ("action", false);
 		gocraft = false;
 	}
-	IEnumerator wait_v(bool plop)
+	IEnumerator wait_v(bool plop, GameObject weapon)
 	{
-		yield return new WaitForSeconds(2f);
+		GameObject tmp;
+		while (Mathf.Abs(transform.position.x - GameObject.FindWithTag("Player").transform.position.x) >= 0.1f)
+			yield return new WaitForSeconds(0.2f);
 		if (!plop)
 			GameObject.Find ("Spawn_info").GetComponent<bubble_inf> ().show (erreur);
 		else
 		{
 			GameObject.FindWithTag("Player").GetComponent<Animator>().SetBool("weapon", true);
 			GameObject.Find ("Spawn_info").GetComponent<bubble_inf> ().show (valid);
+			yield return new WaitForSeconds(2);
+			tmp = (GameObject)Instantiate(weapon, GameObject.Find("Spawn_weapon").transform.position, GameObject.Find("Spawn_weapon").transform.rotation);
+			tmp.transform.localScale = GameObject.FindWithTag("Player").transform.localScale;
+			tmp.transform.SetParent(GameObject.FindWithTag("Player").transform);
+			GameObject.FindGameObjectWithTag ("Player").GetComponent<Animator> ().SetBool ("action", false);
 		}
+		click = false;
 	}
 }

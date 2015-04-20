@@ -12,7 +12,6 @@ public class bubble_inf : MonoBehaviour {
 	private bool activate = false;
 	void Update ()
 	{
-		float mult;
 		if (canvas)
 		{
 			canvas.transform.position = transform.position;
