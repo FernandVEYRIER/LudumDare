@@ -52,5 +52,10 @@ public class CleanScene : MonoBehaviour {
 			scout.GetComponent<SpriteRenderer>().material.color = new Color(1, 1, 1, i);
 			yield return new WaitForSeconds(0.00001f);
 		}
+		yield return new WaitForSeconds(0.5f);
+		GameObject.Find("Canvas").SetActive(false);
+		GameObject.Find("PixelEffector").GetComponent<PixelEffector>().startTransition();
+		yield return new WaitForSeconds(1.3f);
+		Application.LoadLevel("CutScene");
 	}
 }
