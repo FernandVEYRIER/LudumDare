@@ -28,6 +28,7 @@ GameObject:
   - 4: {fileID: 464660}
   - 212: {fileID: 21298118}
   - 114: {fileID: 11408888}
+  - 95: {fileID: 9585192}
   m_Layer: 0
   m_Name: Weapon3
   m_TagString: Untagged
@@ -54,12 +55,29 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.17600012, y: -1.70000005, z: 0}
+  m_LocalPosition: {x: 0, y: -1.65999997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 421796}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!95 &9585192
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174520}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 575c8b8e4ee93f5499e4e7117a7f373d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11408888
 MonoBehaviour:
   m_ObjectHideFlags: 1
