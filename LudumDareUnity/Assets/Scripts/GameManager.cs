@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour {
 
 	public void quitGame()
 	{
-		Application.Quit();
+		Time.timeScale = 1;
+		Application.LoadLevel("MainMenu");
 	}
 
 	public void affCredits()

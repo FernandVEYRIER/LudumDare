@@ -5,6 +5,12 @@ public class LoadLevel : MonoBehaviour {
 
 	public void LoadGame()
 	{
-		Application.LoadLevel(1);
+		Application.LoadLevel(Application.loadedLevel + 1);
+	}
+
+	void Update()
+	{
+		if (Input.anyKeyDown)
+			Application.LoadLevel(Application.loadedLevel + 1);
 	}
 }

@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-using AlpacaSound;
 using System.Collections.Generic;
 
 public class FadeTransition : MonoBehaviour {
 
-	RetroPixel var;
 	public CameraPos [] camPos;
 
 	[System.Serializable]
@@ -13,12 +11,6 @@ public class FadeTransition : MonoBehaviour {
 	{
 		public string roomName;
 		public Transform position;
-	}
-
-	void Start () 
-	{
-		var = this.GetComponent<RetroPixel>();
-		var.enabled = false;
 	}
 
 	public IEnumerator Fade(string roomToGo)

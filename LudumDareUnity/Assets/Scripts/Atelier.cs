@@ -109,7 +109,10 @@ public class Atelier : MonoBehaviour {
 		while (Mathf.Abs(transform.position.x - GameObject.FindWithTag("Player").transform.position.x) >= 0.1f)
 			yield return new WaitForSeconds(0.2f);
 		if (!plop)
+		{
+			yield return new WaitForSeconds(2);
 			GameObject.Find ("Spawn_info").GetComponent<bubble_inf> ().show (erreur);
+		}
 		else
 		{
 			GameObject.FindWithTag("Player").GetComponent<Animator>().SetBool("weapon", true);
