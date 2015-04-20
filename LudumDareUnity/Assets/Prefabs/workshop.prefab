@@ -77,30 +77,39 @@ MonoBehaviour:
   - index: 05000000090000000e000000
     death_anim: 2
     weapon: {fileID: 142392, guid: 973de9d58c5fc2f4ab9311b4098e4bdf, type: 2}
+    distance: 6
   - index: 020000000c0000000e000000
     death_anim: 3
     weapon: {fileID: 174520, guid: e5445287e2d7cde4e801f446fa714dcb, type: 2}
+    distance: 6
   - index: 060000000f00000010000000
     death_anim: 1
     weapon: {fileID: 138444, guid: 5db68c45b31b4b147b4a4e3a5f59ea8d, type: 2}
+    distance: 6
   - index: 04000000050000000d000000
     death_anim: 2
     weapon: {fileID: 169688, guid: c6a8c86f13c617e4aac0ddf51491d1bc, type: 2}
+    distance: 6
   - index: 090000000e0000000f000000
     death_anim: 2
     weapon: {fileID: 121898, guid: a651994cefa53884297c7fcc168a93ce, type: 2}
+    distance: 10
   - index: 070000000a00000010000000
     death_anim: 1
     weapon: {fileID: 155032, guid: f60011045924c864fba6a91f584b1f72, type: 2}
+    distance: 6
   - index: 040000000a0000000b000000
     death_anim: 1
     weapon: {fileID: 171504, guid: c1e45e8013144e54c9e34126af4c30a2, type: 2}
+    distance: 6
   - index: 02000000030000000c000000
     death_anim: 3
     weapon: {fileID: 149448, guid: 637a77fb4ff14b242a762f7d2b7029bf, type: 2}
+    distance: 6
   flash_color: {r: .191176474, g: 1, b: .330628842, a: 1}
   click: 0
   last_anim: 0
+  s_distance: 0
 --- !u!212 &21234280
 SpriteRenderer:
   m_ObjectHideFlags: 1

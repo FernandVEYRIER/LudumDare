@@ -10,6 +10,7 @@ public class Atelier : MonoBehaviour {
 		public int[] index = new int[3];
 		public int death_anim;
 		public GameObject weapon;
+		public float distance = 6;
 	}
 	public Sprite valid;
 	public Sprite erreur;
@@ -23,6 +24,8 @@ public class Atelier : MonoBehaviour {
 	[HideInInspector]
 	public int last_anim = 0;
 	private GameObject tmp_obj;
+	[HideInInspector]
+	public float s_distance;
 	void Start()
 	{
 		inv = GameObject.Find ("Inventory").GetComponent<InventoryHandler> ();
@@ -78,6 +81,7 @@ public class Atelier : MonoBehaviour {
 			if (i == 3)
 			{
 				last_anim = elem.death_anim;
+				s_distance = elem.distance;
 				plop = true;
 				weapon = elem.weapon;
 				break;
