@@ -733,7 +733,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 10.181818
+  - time: 10.090909
     functionName: LoadGame
     data: 
     objectReferenceParameter: {fileID: 0}
