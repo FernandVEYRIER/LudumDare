@@ -9,6 +9,8 @@ public class Atelier : MonoBehaviour {
 	{
 		public int[] index = new int[3];
 	}
+	public Sprite valid;
+	public Sprite erreur;
 	public tab[] craft = new tab[1];
 	public Color flash_color;
 	private bool fl = false;
@@ -47,6 +49,7 @@ public class Atelier : MonoBehaviour {
 	void OnMouseDown()
 	{
 		click = true;
+		bool plop = false;
 		if (!GameObject.FindGameObjectWithTag ("Player").GetComponent<ChangeRoom> ().transition && Math.Abs(transform.position.x - GameObject.FindGameObjectWithTag ("Player").transform.position.x) > 0.1f)
 		{
 			if (GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform> ().position.x < transform.position.x)
@@ -67,9 +70,9 @@ public class Atelier : MonoBehaviour {
 			while (i < 3 && tmp[i] == elem.index[i])
 				i++;
 			if (i == 3)
-				print("succes!");
+				plop = true;
 		}
-		print ("fail");
+		StartCoroutine (wait_v(plop));
 	}
 	IEnumerator flash()
 	{
@@ -89,5 +92,13 @@ public class Atelier : MonoBehaviour {
 		yield return new WaitForSeconds(2f);
 		GameObject.FindGameObjectWithTag ("Player").GetComponent<Animator> ().SetBool ("action", false);
 		gocraft = false;
+	}
+	IEnumerator wait_v(bool plop)
+	{
+		yield return new WaitForSeconds(2f);
+		if (!plop)
+			GameObject.Find("Spawn_info").GetComponent<bubble_inf>().show(erreur);
+		else
+			GameObject.Find("Spawn_info").GetComponent<bubble_inf>().show(valid);
 	}
 }

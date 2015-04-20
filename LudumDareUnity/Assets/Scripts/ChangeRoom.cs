@@ -17,7 +17,6 @@ public class ChangeRoom : MonoBehaviour {
 			DontMove ();
 		if (Input.GetMouseButtonDown (0) && !transition && !this.GetComponent<Animator>().GetBool("action"))
 		{
-			print (target);
 			target = Camera.main.ScreenToWorldPoint (Input.mousePosition).x;
 		}
 		if (!GameObject.Find ("workshop").GetComponent<Atelier> ().click)
