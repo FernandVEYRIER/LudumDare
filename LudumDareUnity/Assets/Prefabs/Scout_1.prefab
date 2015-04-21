@@ -11,6 +11,8 @@ GameObject:
   - 212: {fileID: 21206920}
   - 95: {fileID: 9588386}
   - 114: {fileID: 11408748}
+  - 60: {fileID: 6071706}
+  - 50: {fileID: 5069974}
   m_Layer: 0
   m_Name: Scout_1
   m_TagString: Scout
@@ -61,6 +63,66 @@ Transform:
   - {fileID: 409156}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5069974
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194118}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!60 &6071706
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194118}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: .419999987, y: -1.41999996}
+      - {x: .460000008, y: -1.24000001}
+      - {x: .5, y: -.75999999}
+      - {x: .5, y: -.219999999}
+      - {x: .460000008, y: -.0199999996}
+      - {x: .5, y: .159999996}
+      - {x: .5, y: .5}
+      - {x: .300000012, y: .800000012}
+      - {x: .159999996, y: .819999993}
+      - {x: -.100000001, y: .819999993}
+      - {x: -.340000004, y: .75999999}
+      - {x: -.720000029, y: .699999988}
+      - {x: -.800000012, y: .600000024}
+      - {x: -.800000012, y: .5}
+      - {x: -.75999999, y: .379999995}
+      - {x: -.560000002, y: -.0399999991}
+      - {x: -.519999981, y: -.159999996}
+      - {x: -.5, y: -.899999976}
+      - {x: -.519999981, y: -1.22000003}
+      - {x: -.419999987, y: -1.51999998}
+      - {x: -.300000012, y: -1.58000004}
+      - {x: -.560000002, y: -1.98000002}
+      - {x: -.720000029, y: -2.0999999}
+      - {x: -.779999971, y: -2.27999997}
+      - {x: -.100000001, y: -2.31999993}
+      - {x: .0199999996, y: -1.65999997}
+      - {x: -.119999997, y: -2.51999998}
+      - {x: .0399999991, y: -2.53999996}
+      - {x: .319999993, y: -2.53999996}
+      - {x: .360000014, y: -2.5}
+      - {x: .340000004, y: -2.07999992}
+      - {x: .280000001, y: -1.60000002}
 --- !u!95 &9588386
 Animator:
   serializedVersion: 3

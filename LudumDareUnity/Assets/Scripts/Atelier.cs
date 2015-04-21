@@ -124,7 +124,7 @@ public class Atelier : MonoBehaviour {
 			GameObject.Find ("Spawn_info").GetComponent<bubble_inf> ().show (valid);
 			if (tmp_obj)
 				Destroy(tmp_obj);
-			tmp_obj = (GameObject)Instantiate(weapon, new Vector3 (GameObject.FindWithTag("Player").transform.position.x + 0.38f - weapon.GetComponent<SpriteRenderer>().sprite.bounds.size.x / 2, GameObject.FindWithTag("Player").transform.position.y, GameObject.FindWithTag("Player").transform.position.z), GameObject.FindWithTag("Player").transform.rotation);
+			tmp_obj = (GameObject)Instantiate(weapon, new Vector3 (GameObject.FindWithTag("Player").transform.position.x + (0.38f - weapon.GetComponent<SpriteRenderer>().sprite.bounds.size.x / 2) * GameObject.FindWithTag("Player").transform.localScale.x, GameObject.FindWithTag("Player").transform.position.y, GameObject.FindWithTag("Player").transform.position.z), GameObject.FindWithTag("Player").transform.rotation);
 			tmp_obj.transform.localScale = GameObject.FindWithTag("Player").transform.localScale;
 			tmp_obj.transform.SetParent(GameObject.FindWithTag("Player").transform);
 			GameObject.FindGameObjectWithTag ("Player").GetComponent<Animator> ().SetBool ("action", false);
