@@ -7,6 +7,10 @@ public class SpawnScout : MonoBehaviour {
 
 	void Start () 
 	{
-		Instantiate(scoutPrefab[Random.Range(0, scoutPrefab.Length)], this.transform.position, Quaternion.identity);
+		GameObject go;
+		int rnd;
+		go = (GameObject) Instantiate(scoutPrefab[rnd = Random.Range(0, scoutPrefab.Length)], this.transform.position, Quaternion.identity);
+		if (rnd == 1)
+			go.transform.position += new Vector3(0, 1, 0);
 	}
 }

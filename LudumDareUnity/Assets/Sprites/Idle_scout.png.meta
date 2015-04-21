@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 3ce2c38d29b7ff14e95b3839c77d91e7
-timeCreated: 1429453285
+timeCreated: 1429574178
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -60,8 +60,8 @@ TextureImporter:
         y: 400
         width: 200
         height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .5, y: .680000007}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Idle_scout_1
       rect:
@@ -70,8 +70,8 @@ TextureImporter:
         y: 400
         width: 200
         height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .5, y: .680000007}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Idle_scout_2
       rect:
@@ -80,8 +80,8 @@ TextureImporter:
         y: 200
         width: 200
         height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .5, y: .680000007}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Idle_scout_3
       rect:
@@ -90,8 +90,8 @@ TextureImporter:
         y: 200
         width: 200
         height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .5, y: .680000007}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
