@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoutPrefab:
-  - {fileID: 175898, guid: fb66ec43adb99a9459da76b0d1b5b40c, type: 2}
+  - {fileID: 175898, guid: f6432533b79857a44be1f3bead831ad0, type: 2}
   - {fileID: 194118, guid: 046e6c240d1facb4eab6a311cc26821c, type: 2}
 --- !u!1001 &100100000
 Prefab:
